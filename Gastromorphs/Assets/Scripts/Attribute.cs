@@ -1,12 +1,13 @@
-public abstract class Attribute
-{
-    protected int id;
-    protected string name;
-    protected string description;
-    protected string IconURI;
+using UnityEngine;
 
-    protected void GetIcon()
-    {
-        // LOGICA DE OBTENER EL ICONO
+public abstract class Attribute : ScriptableObject
+{
+    protected int id { get; set; }
+    protected string description { get; set; }
+    protected string IconURI { get; set; }
+
+    protected virtual void GetIcon()
+    { 
+    
     }
 }

@@ -7,4 +7,9 @@ public class Biome : Attribute
         this.description = description;
         this.IconURI = IconURI;
     }
+
+    protected void GetIcon()
+    {
+
+    }
 }
