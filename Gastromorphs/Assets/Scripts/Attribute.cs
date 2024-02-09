@@ -1,12 +1,19 @@
-public abstract class Attribute
+using UnityEngine;
+
+public abstract class Attribute : ScriptableObject
 {
     protected int id;
     protected string name;
     protected string description;
-    protected string IconURI;
+    protected string iconURI;
 
-    protected void GetIcon()
+
+    public Attribute(int id, string name, string description, string iconURI)
     {
-        // LOGICA DE OBTENER EL ICONO
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.iconURI = iconURI;
     }
+
 }
