@@ -2,12 +2,18 @@ using UnityEngine;
 
 public abstract class Attribute : ScriptableObject
 {
-    protected int id { get; set; }
-    protected string description { get; set; }
-    protected string IconURI { get; set; }
+    protected int id;
+    protected string name;
+    protected string description;
+    protected string iconURI;
 
-    protected virtual void GetIcon()
-    { 
-    
+
+    public Attribute(int id, string name, string description, string iconURI)
+    {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.iconURI = iconURI;
     }
+
 }
