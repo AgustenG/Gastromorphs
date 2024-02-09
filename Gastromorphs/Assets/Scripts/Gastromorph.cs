@@ -1,19 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gastromorph : ScriptableObject, IDataObject
+public class Gastromorph 
 {
-    public int id { get; set; }
-    public string description { get; set; }
-    public string IconURI { get; set; }
-    private List<Biome> biomes;
-    private List<Element> elements;
-    private List<Flavour> flavours;
-    private List<string> AnimURI;
+    private int gastromorph_id;
+    private string name;
+    private string description;
 
-    public Gastromorph(int id, string name, string description, List<Biome> biomes, List<Element> elements, List<Flavour> flavours, string IconURI, List<string> AnimURI)
+    public Gastromorph(int gastromorph_id , string name, string description, List<Biome> biomes, List<Element> elements, List<Flavour> flavours, string IconURI, List<string> AnimURI)
     {
-        this.id = id;
+        this.gastromorph_id = gastromorph_id;
         this.name = name;
         this.description = description;
         this.biomes = biomes;
@@ -21,15 +17,5 @@ public class Gastromorph : ScriptableObject, IDataObject
         this.flavours = flavours;
         this.IconURI = IconURI;
         this.AnimURI = AnimURI;
-    }
-
-    public void GetIcon()
-    {
-        // Logica
-    }
-
-    public void GetAnim()
-    {
-        // Logica
     }
 }
