@@ -1,4 +1,6 @@
-public abstract class Attribute
+using UnityEngine;
+
+public abstract class Attribute : ScriptableObject
 {
     protected int id;
     protected string name;
