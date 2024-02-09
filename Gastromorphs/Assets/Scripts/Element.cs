@@ -1,12 +1,10 @@
 public class Element : Attribute
 {
-    public Element(int id, string name, string description, string iconURI) : base(id, name, description, iconURI)
+    public Element(int id, string name, string description, string iconUri) : base(id, name, description, iconUri)
     {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.iconURI = iconURI;
+        this.iconUri = iconUri;
     }
-
-
 }

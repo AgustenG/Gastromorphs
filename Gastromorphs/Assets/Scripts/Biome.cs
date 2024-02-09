@@ -1,15 +1,10 @@
 public class Biome : Attribute
 {
-    public Biome(int id, string name, string description, string iconURI) : base(id, name, description, iconURI)
+    public Biome(int id, string name, string description, string iconUri) : base(id, name, description, iconUri)
     {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.iconURI = iconURI;
-    }
-
-    protected void GetIcon()
-    {
-
+        this.iconUri = iconUri;
     }
 }
