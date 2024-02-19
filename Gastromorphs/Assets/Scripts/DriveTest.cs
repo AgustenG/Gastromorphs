@@ -26,7 +26,7 @@ public class DriveTest : MonoBehaviour
     {
         GameObject test = null;
 
-        using (UnityWebRequest www = UnityWebRequestAssetBundle.GetAssetBundle("https://firebasestorage.googleapis.com/v0/b/gastromorphs.appspot.com/o/burger.fbx?alt=media&token=2c016173-5d44-43fe-9adc-ba6229b4bc97"))
+        using (UnityWebRequest www = UnityWebRequestAssetBundle.GetAssetBundle("https://drive.usercontent.google.com/u/0/uc?id=1s0qwUYTt_UsyG1lBw0N3nnerYxByByHl&export=download"))
 
         {
             yield return www.SendWebRequest();
