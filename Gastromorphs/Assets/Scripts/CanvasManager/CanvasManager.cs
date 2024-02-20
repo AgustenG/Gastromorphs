@@ -8,16 +8,16 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] public GameObject startMenu;
     [Header("ListView")]
     [SerializeField] public GameObject listView;
-    [Header("IconsView")]
-    [SerializeField] public GameObject iconsView;
+    [Header("SearchView")]
+    [SerializeField] public GameObject searchView;
     [Header("MapView")]
     [SerializeField] public GameObject mapView;
     [Header("GastromorphPage")]
     [SerializeField] public GameObject gastromorph;
     [Header("ListButton")]
     [SerializeField] public GameObject listButton;
-    [Header("IconsButton")]
-    [SerializeField] public GameObject iconsButton;
+    [Header("SearchButton")]
+    [SerializeField] public GameObject searchButton;
     [Header("MapButton")]
     [SerializeField] public GameObject mapButton;
 
@@ -37,41 +37,39 @@ public class CanvasManager : MonoBehaviour
     {
         startMenu.SetActive(true);
         listView.SetActive(false);
-        iconsView.SetActive(false);
+        searchView.SetActive(false);
         mapView.SetActive(false);
         gastromorph.SetActive(false);
-        Debug.Log("heyy");
         listButton.SetActive(false);
-        iconsButton.SetActive(false);
+        searchButton.SetActive(false);
         mapButton.SetActive(false);
         Time.timeScale = 1f;
     }
     public void startButtons()
     {
-        Debug.Log("me abri");
-        listButton.SetActive(true);
-        iconsButton.SetActive(true);
-        mapButton.SetActive(true);
+        listButton.SetActive(!listButton.activeSelf);
+        searchButton.SetActive(!searchButton.activeSelf);
+        mapButton.SetActive(!mapButton.activeSelf);
         Time.timeScale = 1f;
     }
 
-    public void startIcons()
+    public void startSearch()
     {
         startMenu.SetActive(false);
-        iconsView.SetActive(true);
+        searchView.SetActive(true);
         Time.timeScale = 0f;
     }
     public void startMap()
     {
         startMenu.SetActive(false);
-        iconsView.SetActive(false);
+        searchView.SetActive(false);
         mapView.SetActive(true);
         Time.timeScale = 0f;
     }
     public void startList()
     {
         startMenu.SetActive(false);
-        iconsView.SetActive(false);
+        searchView.SetActive(false);
         mapView.SetActive(false);
         listView.SetActive(true);
         Time.timeScale = 0f;
@@ -79,7 +77,7 @@ public class CanvasManager : MonoBehaviour
     public void startGastromorph()
     {
         startMenu.SetActive(false);
-        iconsView.SetActive(false);
+        searchView.SetActive(false);
         mapView.SetActive(false);
         listView.SetActive(false);
         gastromorph.SetActive(true);
@@ -87,7 +85,7 @@ public class CanvasManager : MonoBehaviour
     }
     public void volver()
     {
-        iconsView.SetActive(false);
+        searchView.SetActive(false);
         mapView.SetActive(false);
         listView.SetActive(false);
         gastromorph.SetActive(false);
@@ -96,7 +94,7 @@ public class CanvasManager : MonoBehaviour
     }
     public void activeModel()
     {
-        iconsView.SetActive(false);
+        searchView.SetActive(false);
         mapView.SetActive(false);
         listView.SetActive(false);
         gastromorph.SetActive(false);
@@ -111,9 +109,9 @@ public class CanvasManager : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #endif
 
     }
 }
