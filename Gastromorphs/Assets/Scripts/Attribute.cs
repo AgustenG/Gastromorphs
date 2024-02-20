@@ -7,6 +7,20 @@ public abstract class Attribute : IComparable<Attribute>
     protected string description;
     protected string iconUri;
 
+    public int ID {  
+        get { return id; }
+    }
+    public string Name {
+        get { return name;}
+    }
+
+ public string Description {
+        get { return description;}
+    }
+
+ public string IconUri {
+        get { return iconUri;}
+    }
 
     public Attribute(int id, string name, string description, string iconUri)
     {
