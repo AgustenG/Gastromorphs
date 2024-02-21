@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Xml.Linq;
 
+
+[System.Serializable]
 public class Gastromorph : IComparable<Gastromorph>
 {
     public int Gastromorph_id { get; }
