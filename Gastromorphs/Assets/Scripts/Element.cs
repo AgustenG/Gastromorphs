@@ -1,3 +1,4 @@
+[System.Serializable]
 public class Element : Attribute
 {
     public Element(int id, string name, string description, string iconUri) : base(id, name, description, iconUri)

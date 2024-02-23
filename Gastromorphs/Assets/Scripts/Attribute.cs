@@ -1,5 +1,5 @@
 using System;
-
+using Unity.VisualScripting.ReorderableList;
 public abstract class Attribute : IComparable<Attribute>
 {
     protected int id;
@@ -7,6 +7,24 @@ public abstract class Attribute : IComparable<Attribute>
     protected string description;
     protected string iconUri;
 
+    public int ID
+    {
+        get { return id; }
+    }
+    public string Name
+    {
+        get { return name; }
+    }
+
+    public string Description
+    {
+        get { return description; }
+    }
+
+    public string IconUri
+    {
+        get { return iconUri; }
+    }
 
     public Attribute(int id, string name, string description, string iconUri)
     {
@@ -19,4 +37,6 @@ public abstract class Attribute : IComparable<Attribute>
     {
         return this.id.CompareTo(other.id);
     }
+
+
 }

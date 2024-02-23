@@ -1,3 +1,4 @@
+[System.Serializable]
 public class Flavour : Attribute
 {
     public Flavour(int id, string name, string description, string iconUri) :base(id, name, description, iconUri)
