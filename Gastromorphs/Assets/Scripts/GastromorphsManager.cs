@@ -14,7 +14,7 @@ public class GastromorphsManager : MonoBehaviour
         get { return allGastromorphs; }
         private set { allGastromorphs = value; }
     }
-    
+
     [SerializeField]
     private List<Biome> allBiomes = new();
     public List<Biome> AllBiomes
@@ -38,6 +38,9 @@ public class GastromorphsManager : MonoBehaviour
         get { return allFlavours; }
         private set { allFlavours = value; }
     }
+
+
+    [SerializeField] public GridElement grid;
 
     public int GastromorphCount
     {
@@ -69,6 +72,8 @@ public class GastromorphsManager : MonoBehaviour
             Destroy(gameObject);
         else
             instance = this;
+
+       
     }
 
     public void InstantiateGastromorph()
@@ -76,11 +81,11 @@ public class GastromorphsManager : MonoBehaviour
         foreach (Gastromorph gastromorph in AllGastromorphs)
         {
             GameObject prefab = (GameObject)Resources.Load($"{gastromorph.Name}");
-      
+
             Instantiate(prefab);
             prefab.transform.position = Vector3.zero;
         }
-     
+
     }
 
 }

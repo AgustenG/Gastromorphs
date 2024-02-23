@@ -1,18 +1,24 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GridElement : MonoBehaviour
 {
     public GameObject prefab;
 
-    // Start is called before the first frame update
-    void Start()
+    
+
+    public void SetElements(List<Element> elements)
     {
-        for(int i = 0; i < 7; i++)
+
+        foreach (Element element in elements)
         {
             GameObject go = Instantiate(prefab, this.transform);
             go.SetActive(true);
+
+            go.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>($"{element.Name}");
+          
         }
+
     }
 }

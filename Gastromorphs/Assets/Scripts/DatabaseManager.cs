@@ -25,6 +25,7 @@ public class DatabaseManager : MonoBehaviour
         dbCommandInsertValue = dbConnection.CreateCommand();
         dbCommandReadValue = dbConnection.CreateCommand();
         manager = GastromorphsManager.Instance;
+        SetGastromorphsFromDB();
     }
 
     private void OnDisable()
@@ -33,17 +34,7 @@ public class DatabaseManager : MonoBehaviour
         Debug.Log("Database disconnected");
     }
 
-    public void Click()
-    {
-        //DataBaseAction(InsertGastromorph("Taco", "dasojadsi", "1,2", "1,2", "1,2", "sadoas.png", "sadas.png"));
-        
-        SetGastromorphsFromDB();
 
-        manager.InstantiateGastromorph();
-
-        Destroy(this);
-
-    }
 
     private void SetBiomesFromDB()
     {
@@ -97,6 +88,7 @@ public class DatabaseManager : MonoBehaviour
                 manager.AllElements.Add(new Element(elementID, name, desc, iconUri));
             }
         }
+        manager.grid.SetElements(manager.AllElements);
         dbCommandReadValue.Dispose();
 
     }
@@ -105,6 +97,7 @@ public class DatabaseManager : MonoBehaviour
     {
         SetBiomesFromDB();
         SetElementsFromDB();
+
         SetFlavoursFromDB();
 
 
@@ -168,6 +161,9 @@ public class DatabaseManager : MonoBehaviour
             }
         }
         dbCommandReadValue.Dispose();
+
+    
+        Destroy(this);
     }
 
     private void DataBaseAction(string action)
