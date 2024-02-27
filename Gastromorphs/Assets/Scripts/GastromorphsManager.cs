@@ -39,9 +39,6 @@ public class GastromorphsManager : MonoBehaviour
         private set { allFlavours = value; }
     }
 
-
-    [SerializeField] public GridElement grid;
-
     public int GastromorphCount
     {
         get { return AllGastromorphs.Count; }

@@ -10,6 +10,11 @@ public class DatabaseManager : MonoBehaviour
     IDbCommand dbCommandInsertValue;
     IDbCommand dbCommandReadValue;
 
+    [SerializeField] private GridManager gridGastromorph;
+    [SerializeField] private GridManager gridBiome;
+    [SerializeField] private GridManager gridElement;
+    [SerializeField] private GridManager gridFlavour;
+
     private GastromorphsManager manager;
 
     public enum Tables
@@ -51,7 +56,29 @@ public class DatabaseManager : MonoBehaviour
                 manager.AllBiomes.Add(new Biome(biomeID, name, desc, iconUri));
             }
         }
+        gridBiome.SetBiomes(manager.AllBiomes);
         dbCommandReadValue.Dispose();
+    }
+
+    private void SetElementsFromDB()
+    {
+        dbCommandReadValue = dbConnection.CreateCommand();
+        dbCommandReadValue.CommandText = "SELECT * FROM \"main\".\"Elements\"";
+        using (IDataReader dataReader = dbCommandReadValue.ExecuteReader())
+        {
+            while (dataReader.Read())
+            {
+                int elementID = dataReader.GetInt32(0);
+                string name = (string)dataReader["name"];
+                string desc = (string)dataReader["description"];
+                string iconUri = (string)dataReader["elementUri"];
+
+                manager.AllElements.Add(new Element(elementID, name, desc, iconUri));
+            }
+        }
+        gridElement.SetElements(manager.AllElements);
+        dbCommandReadValue.Dispose();
+
     }
 
     private void SetFlavoursFromDB()
@@ -70,34 +97,14 @@ public class DatabaseManager : MonoBehaviour
                 manager.AllFlavours.Add(new Flavour(flavourID, name, desc, iconUri));
             }
         }
+        gridFlavour.SetFlavours(manager.AllFlavours);
         dbCommandReadValue.Dispose();
-    }
-    private void SetElementsFromDB()
-    {
-        dbCommandReadValue = dbConnection.CreateCommand();
-        dbCommandReadValue.CommandText = "SELECT * FROM \"main\".\"Elements\"";
-        using (IDataReader dataReader = dbCommandReadValue.ExecuteReader())
-        {
-            while (dataReader.Read())
-            {
-                int elementID = dataReader.GetInt32(0);
-                string name = (string)dataReader["name"];
-                string desc = (string)dataReader["description"];
-                string iconUri = (string)dataReader["elementUri"];
-
-                manager.AllElements.Add(new Element(elementID, name, desc, iconUri));
-            }
-        }
-        manager.grid.SetElements(manager.AllElements);
-        dbCommandReadValue.Dispose();
-
     }
 
     private void SetGastromorphsFromDB()
     {
         SetBiomesFromDB();
         SetElementsFromDB();
-
         SetFlavoursFromDB();
 
 
@@ -156,10 +163,10 @@ public class DatabaseManager : MonoBehaviour
                         }
                     }
                 }
-         
                 manager.AllGastromorphs.Add(new(gastroId, name, desc, tempBiomes, tempElements, tempFlavours));
             }
         }
+        gridGastromorph.SetGastromorphs(manager.AllGastromorphs);
         dbCommandReadValue.Dispose();
 
     
