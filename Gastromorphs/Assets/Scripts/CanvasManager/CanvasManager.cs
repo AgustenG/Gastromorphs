@@ -35,14 +35,15 @@ public class CanvasManager : MonoBehaviour
     }
     private void Start()
     {
-        startMenu.SetActive(true);
-        listView.SetActive(false);
-        searchView.SetActive(false);
-        mapView.SetActive(false);
-        gastromorph.SetActive(false);
-        listButton.SetActive(false);
-        searchButton.SetActive(false);
-        mapButton.SetActive(false);
+        //startMenu.SetActive(true);
+        //listView.SetActive(false);
+        //searchView.SetActive(false);
+        //mapView.SetActive(false);
+        //gastromorph.SetActive(false);
+        //listButton.SetActive(false);
+        //searchButton.SetActive(false);
+        //mapButton.SetActive(false);
+        startMap();
         Time.timeScale = 1f;
     }
     public void startButtons()
