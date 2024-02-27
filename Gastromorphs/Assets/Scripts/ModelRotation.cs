@@ -26,7 +26,7 @@ public class ModelRotation : MonoBehaviour, IDragHandler
     {
         foreach (Transform model in models)
         {
-            if (model.gameObject.name == "Taco")
+            if (model.gameObject.name == "Guindilava")
             {
                 model.gameObject.SetActive(true);
             }
