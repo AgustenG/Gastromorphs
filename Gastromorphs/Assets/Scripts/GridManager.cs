@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,8 +15,10 @@ public class GridManager : MonoBehaviour
             go.SetActive(true);
 
             go.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>($"Gastromorphs/{gastromorph.Name}");
-            //go.GetComponentsInChildren<Text>()[0].text = gastromorph.Gastromorph_id.ToString();
-            //go.GetComponentsInChildren<Text>()[1].text = gastromorph.Name;
+
+            Debug.Log(gastromorph.Gastromorph_id);
+            go.GetComponentsInChildren<TextMeshProUGUI>()[0].text = gastromorph.Gastromorph_id.ToString();
+            go.GetComponentsInChildren<TextMeshProUGUI>()[1].text = gastromorph.Name;
         }
     }
 

@@ -115,7 +115,7 @@ public class DatabaseManager : MonoBehaviour
             while (dataReader.Read())
             {
                 //Get data from DB
-                int gastroId = dataReader.GetOrdinal("gastromorph_id");
+                int gastroId = dataReader.GetInt32(dataReader.GetOrdinal("gastromorph_id"));
                 string name = (string)dataReader["name"];
                 string desc = (string)dataReader["description"];
                 string biomeIds = (string)dataReader["biome_ids"];
