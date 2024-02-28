@@ -1,7 +1,7 @@
 [System.Serializable]
-public class Element : Attribute
+public class Type : Attribute
 {
-    public Element(int id, string name, string description, string iconUri) : base(id, name, description, iconUri)
+    public Type(int id, string name, string description, string iconUri) : base(id, name, description, iconUri)
     {
         this.id = id;
         this.name = name;

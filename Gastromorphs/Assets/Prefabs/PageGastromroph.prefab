@@ -793,7 +793,7 @@ GameObject:
   - component: {fileID: 7918584096708116032}
   - component: {fileID: 1248547433947322513}
   m_Layer: 5
-  m_Name: GastromorphPage
+  m_Name: PageGastromroph
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
