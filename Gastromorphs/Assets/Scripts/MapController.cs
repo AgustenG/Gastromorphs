@@ -1,32 +1,33 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class MapController : MonoBehaviour/*, IPointerClickHandler*/
+public class MapController : MonoBehaviour 
 {
+    public float seconds;
     public GameObject Icon;
 
-    public void ActiveIcon()
+    private void Awake()
     {
-        Icon.SetActive(true);
-        Icon.GetComponent<Animator>().Play("AnimLocation");
+        Icon.SetActive(false);
     }
 
-    //private void Start()
-    //{
-    //    Icon.SetActive(true);
-    //    Icon.GetComponent<Animator>().enabled = true;
-    //}
-    //public void OnPointerClick(PointerEventData eventData)
-    //{
-    //    Debug.Log("d");
-    //    transform.GetComponentInChildren<RawImage>().gameObject.SetActive(true);
-    //}
+    public void StartFilter()
+    {
+        if(CanvasManager.instance.mapBtn == false)
+        {
+            CanvasManager.instance.mapBtn = true;
+            StartCoroutine(Filter());
+        }
+    }
 
-    //public void disableIcon()
-    //{
-    //    transform.GetComponentInChildren<RawImage>().enabled = false;
-    //}
+    private IEnumerator Filter()
+    {
+        Icon.gameObject.SetActive(true);
+        yield return new WaitForSeconds(seconds);
+        Icon.gameObject.SetActive(false);
+        CanvasManager.instance.startSearch();
+        Debug.Log(gameObject.name);
+        CanvasManager.instance.mapBtn = false;
+    }
 }

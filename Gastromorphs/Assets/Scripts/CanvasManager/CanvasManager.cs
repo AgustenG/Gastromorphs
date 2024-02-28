@@ -21,6 +21,8 @@ public class CanvasManager : MonoBehaviour
     [Header("MapButton")]
     [SerializeField] public GameObject mapButton;
 
+    [HideInInspector] public bool mapBtn = false;
+
 
     void Awake()
     {

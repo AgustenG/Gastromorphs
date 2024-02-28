@@ -1592,7 +1592,7 @@ GameObject:
   - component: {fileID: 214685968}
   - component: {fileID: 214685967}
   m_Layer: 5
-  m_Name: Bosque
+  m_Name: Forest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1630,6 +1630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 445a88b09ae265246bef19f9ec9e3e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seconds: 1
   Icon: {fileID: 523056324}
 --- !u!114 &214685968
 MonoBehaviour:
@@ -1677,7 +1678,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 214685967}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
-        m_MethodName: ActiveIcon
+        m_MethodName: StartFilter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2134,7 +2135,7 @@ GameObject:
   - component: {fileID: 289326648}
   - component: {fileID: 289326647}
   m_Layer: 5
-  m_Name: ??
+  m_Name: Port
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2172,6 +2173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 445a88b09ae265246bef19f9ec9e3e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seconds: 1
   Icon: {fileID: 1393344572}
 --- !u!114 &289326648
 MonoBehaviour:
@@ -2219,7 +2221,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 289326647}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
-        m_MethodName: ActiveIcon
+        m_MethodName: StartFilter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3271,7 +3273,7 @@ GameObject:
   - component: {fileID: 408367653}
   - component: {fileID: 408367652}
   m_Layer: 5
-  m_Name: Nevado
+  m_Name: Snow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3309,6 +3311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 445a88b09ae265246bef19f9ec9e3e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seconds: 1
   Icon: {fileID: 1399015115}
 --- !u!114 &408367653
 MonoBehaviour:
@@ -3356,7 +3359,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 408367652}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
-        m_MethodName: ActiveIcon
+        m_MethodName: StartFilter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5796,7 +5799,7 @@ GameObject:
   - component: {fileID: 1055402849}
   - component: {fileID: 1055402848}
   m_Layer: 5
-  m_Name: Pradera
+  m_Name: Plains
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5834,6 +5837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 445a88b09ae265246bef19f9ec9e3e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seconds: 1
   Icon: {fileID: 1493192997}
 --- !u!114 &1055402849
 MonoBehaviour:
@@ -5881,7 +5885,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1055402848}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
-        m_MethodName: ActiveIcon
+        m_MethodName: StartFilter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8413,7 +8417,7 @@ GameObject:
   - component: {fileID: 1382556602}
   - component: {fileID: 1382556601}
   m_Layer: 5
-  m_Name: Ciudad
+  m_Name: City
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8451,6 +8455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 445a88b09ae265246bef19f9ec9e3e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seconds: 1
   Icon: {fileID: 2104662070}
 --- !u!114 &1382556602
 MonoBehaviour:
@@ -8498,7 +8503,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1382556601}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
-        m_MethodName: ActiveIcon
+        m_MethodName: StartFilter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8886,7 +8891,6 @@ GameObject:
   - component: {fileID: 1459149834}
   - component: {fileID: 1459149833}
   - component: {fileID: 1459149832}
-  - component: {fileID: 1459149835}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -9008,27 +9012,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459149830}
   m_CullTransparentMesh: 1
---- !u!95 &1459149835
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459149830}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cd54c4a0b0b52b141af686be2f93afce, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1464271750
 GameObject:
   m_ObjectHideFlags: 0
@@ -9305,7 +9288,7 @@ GameObject:
   - component: {fileID: 1503842985}
   - component: {fileID: 1503842988}
   m_Layer: 5
-  m_Name: Cementerio
+  m_Name: Cemetery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9377,7 +9360,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1503842988}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
-        m_MethodName: ActiveIcon
+        m_MethodName: StartFilter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9437,6 +9420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 445a88b09ae265246bef19f9ec9e3e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seconds: 1
   Icon: {fileID: 81408105}
 --- !u!1 &1504506547
 GameObject:
@@ -11416,7 +11400,7 @@ GameObject:
   - component: {fileID: 1815634369}
   - component: {fileID: 1815634368}
   m_Layer: 5
-  m_Name: Desierto
+  m_Name: Desert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11454,6 +11438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 445a88b09ae265246bef19f9ec9e3e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seconds: 1
   Icon: {fileID: 1513303384}
 --- !u!114 &1815634369
 MonoBehaviour:
@@ -11501,7 +11486,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1815634368}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
-        m_MethodName: ActiveIcon
+        m_MethodName: StartFilter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12124,7 +12109,7 @@ GameObject:
   - component: {fileID: 1995940103}
   - component: {fileID: 1995940102}
   m_Layer: 5
-  m_Name: Oceano
+  m_Name: Ocean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12162,6 +12147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 445a88b09ae265246bef19f9ec9e3e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seconds: 1
   Icon: {fileID: 154847654}
 --- !u!114 &1995940103
 MonoBehaviour:
@@ -12209,7 +12195,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1995940102}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
-        m_MethodName: ActiveIcon
+        m_MethodName: StartFilter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12696,6 +12682,7 @@ MonoBehaviour:
   listButton: {fileID: 785161179}
   searchButton: {fileID: 1851262414}
   mapButton: {fileID: 1237768875}
+  mapBtn: 0
 --- !u!1 &2104662070
 GameObject:
   m_ObjectHideFlags: 0
