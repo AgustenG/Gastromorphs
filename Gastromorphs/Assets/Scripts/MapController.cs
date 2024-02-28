@@ -27,7 +27,7 @@ public class MapController : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         Icon.gameObject.SetActive(false);
         CanvasManager.instance.startSearch();
-        Debug.Log(gameObject.name);
+        Debug.Log(gameObject.transform.parent.gameObject.name);
         CanvasManager.instance.mapBtn = false;
     }
 }

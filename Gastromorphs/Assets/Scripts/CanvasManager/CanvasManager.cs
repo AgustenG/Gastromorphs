@@ -21,6 +21,9 @@ public class CanvasManager : MonoBehaviour
     [Header("MapButton")]
     [SerializeField] public GameObject mapButton;
 
+    [Header("SettingsButton")]
+    [SerializeField] public GameObject settingsBtn;
+
     [HideInInspector] public bool mapBtn = false;
 
 
@@ -39,6 +42,7 @@ public class CanvasManager : MonoBehaviour
         listButton.SetActive(false);
         searchButton.SetActive(false);
         mapButton.SetActive(false);
+        settingsBtn.SetActive(false);
         Time.timeScale = 1f;
     }
     public void startButtons()
@@ -77,23 +81,27 @@ public class CanvasManager : MonoBehaviour
     }
     public void volver()
     {
+        settingsBtn.SetActive(false);
         searchView.SetActive(false);
         mapView.SetActive(false);
         listView.SetActive(false);
         gastromorph.SetActive(false);
         startMenu.SetActive(true);
     }
-    public void activeModel()
+
+    public void activateCanvas()
     {
+        startGastromorph();
+    }
+
+    public void startSettings()
+    {
+        settingsBtn.SetActive(true);
         searchView.SetActive(false);
         mapView.SetActive(false);
         listView.SetActive(false);
         gastromorph.SetActive(false);
         startMenu.SetActive(false);
-    }
-    public void activateCanvas()
-    {
-        startGastromorph();
     }
 
     public void ExitGame()
