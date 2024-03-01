@@ -3,6 +3,8 @@ using Mono.Data.Sqlite;
 using System.Data;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
+using System.IO;
 
 public class DatabaseManager : MonoBehaviour
 {
@@ -12,8 +14,7 @@ public class DatabaseManager : MonoBehaviour
 
     [SerializeField] private GridManager gridManager;
 
-
-    private GastromorphsManager manager;
+    [SerializeField] private GastromorphsManager manager;
 
     public enum Tables
     {
@@ -21,13 +22,15 @@ public class DatabaseManager : MonoBehaviour
         Element,
         Flavour
     }
-    
+
     private void Awake()
     {
         dbConnection = CreateAndOpenDatabase();
+
+
         dbCommandInsertValue = dbConnection.CreateCommand();
         dbCommandReadValue = dbConnection.CreateCommand();
-        manager = GastromorphsManager.Instance;
+
         SetGastromorphsFromDB();
     }
 
@@ -55,6 +58,7 @@ public class DatabaseManager : MonoBehaviour
             }
         }
         gridManager.SetBiomes(manager.AllBiomes);
+
         dbCommandReadValue.Dispose();
     }
 
@@ -130,7 +134,7 @@ public class DatabaseManager : MonoBehaviour
                 // Check the biomes that the Gastromorph has in the DB and adds it to it list.
                 foreach (int biomeId in biomeIds.Split(",").Select(int.Parse).ToList())
                 {
- 
+
                     foreach (Biome biome in manager.AllBiomes)
                     {
                         if (biome.ID == biomeId)
@@ -167,7 +171,7 @@ public class DatabaseManager : MonoBehaviour
         gridManager.SetGastromorphs(manager.AllGastromorphs);
         dbCommandReadValue.Dispose();
 
-    
+
         Destroy(this);
     }
 
@@ -205,8 +209,21 @@ public class DatabaseManager : MonoBehaviour
 
     private IDbConnection CreateAndOpenDatabase()
     {
-        string dbUri = "URI=file:Assets/StreamingAssets/MyDatabase.db";
-        IDbConnection dbConnection = new SqliteConnection(dbUri);
+        string p = "Mydatabase.db";
+        string dbUri = $"URI=file:{Application.streamingAssetsPath}/Mydatabase.db";
+        string android = "URI=file:" + Application.persistentDataPath + "/" + p;
+
+
+
+        string path = "jar:file://" + Application.dataPath + "!/assets/Mydatabase.db";
+
+        WWW wwwfile = new WWW(path);
+        while(wwwfile.isDone) { }
+        var filepath = string.Format("{0}/{1}", Application.persistentDataPath, "Mydatabase.db");
+        File.WriteAllBytes(filepath, wwwfile.bytes);
+        
+
+        IDbConnection dbConnection = new SqliteConnection(filepath);
         dbConnection.Open();
         return dbConnection;
     }

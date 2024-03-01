@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -54,7 +52,7 @@ public class GridManager : MonoBehaviour
             GameObject go = Instantiate(toggablePrefab, parentContent[(int)Parents.Biome].transform);
             go.SetActive(true);
 
-            go.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>($"Biomes/{biome.Name}");
+           go.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>($"Biomes/{biome.Name}");
 
         }
     }

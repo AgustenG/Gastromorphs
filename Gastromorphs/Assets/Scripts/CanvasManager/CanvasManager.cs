@@ -1,28 +1,26 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class CanvasManager : MonoBehaviour
 {
     public static CanvasManager instance;
     [Header("StartMenu")]
-    [SerializeField] public GameObject startMenu;
+    [SerializeField] private GameObject startMenu;
     [Header("ListView")]
-    [SerializeField] public GameObject listView;
+    [SerializeField] private GameObject listView;
     [Header("SearchView")]
-    [SerializeField] public GameObject searchView;
+    [SerializeField] private GameObject searchView;
     [Header("MapView")]
-    [SerializeField] public GameObject mapView;
+    [SerializeField] private GameObject mapView;
     [Header("GastromorphPage")]
-    [SerializeField] public GameObject gastromorph;
+    [SerializeField] private GameObject gastromorph;
     [Header("ListButton")]
-    [SerializeField] public GameObject listButton;
+    [SerializeField] private GameObject listButton;
     [Header("SearchButton")]
-    [SerializeField] public GameObject searchButton;
+    [SerializeField] private GameObject searchButton;
     [Header("MapButton")]
-    [SerializeField] public GameObject mapButton;
-
+    [SerializeField] private GameObject mapButton;
     [Header("SettingsButton")]
-    [SerializeField] public GameObject settingsBtn;
+    [SerializeField] private GameObject settingsBtn;
 
     [HideInInspector] public bool mapBtn = false;
 
