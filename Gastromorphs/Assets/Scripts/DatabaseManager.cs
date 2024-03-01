@@ -10,10 +10,8 @@ public class DatabaseManager : MonoBehaviour
     IDbCommand dbCommandInsertValue;
     IDbCommand dbCommandReadValue;
 
-    [SerializeField] private GridManager gridGastromorph;
-    [SerializeField] private GridManager gridBiome;
-    [SerializeField] private GridManager gridElement;
-    [SerializeField] private GridManager gridFlavour;
+    [SerializeField] private GridManager gridManager;
+
 
     private GastromorphsManager manager;
 
@@ -51,19 +49,19 @@ public class DatabaseManager : MonoBehaviour
                 int biomeID = dataReader.GetInt32(0);
                 string name = (string)dataReader["name"];
                 string desc = (string)dataReader["description"];
-                string iconUri = (string)dataReader["biomeUri"];
+                string iconUri = "";//(string)dataReader["uri"];
 
                 manager.AllBiomes.Add(new Biome(biomeID, name, desc, iconUri));
             }
         }
-        gridBiome.SetBiomes(manager.AllBiomes);
+        gridManager.SetBiomes(manager.AllBiomes);
         dbCommandReadValue.Dispose();
     }
 
     private void SetElementsFromDB()
     {
         dbCommandReadValue = dbConnection.CreateCommand();
-        dbCommandReadValue.CommandText = "SELECT * FROM \"main\".\"Elements\"";
+        dbCommandReadValue.CommandText = "SELECT * FROM \"main\".\"Types\"";
         using (IDataReader dataReader = dbCommandReadValue.ExecuteReader())
         {
             while (dataReader.Read())
@@ -71,12 +69,12 @@ public class DatabaseManager : MonoBehaviour
                 int elementID = dataReader.GetInt32(0);
                 string name = (string)dataReader["name"];
                 string desc = (string)dataReader["description"];
-                string iconUri = (string)dataReader["elementUri"];
+                string iconUri = "";// (string)dataReader["uri"];
 
-                manager.AllElements.Add(new Element(elementID, name, desc, iconUri));
+                manager.AllElements.Add(new Type(elementID, name, desc, iconUri));
             }
         }
-        gridElement.SetElements(manager.AllElements);
+        gridManager.SetTypes(manager.AllElements);
         dbCommandReadValue.Dispose();
 
     }
@@ -92,12 +90,12 @@ public class DatabaseManager : MonoBehaviour
                 int flavourID = dataReader.GetInt32(0);
                 string name = (string)dataReader["name"];
                 string desc = (string)dataReader["description"];
-                string iconUri = (string)dataReader["flavourUri"];
+                string iconUri = "";//(string)dataReader["uri"];
 
                 manager.AllFlavours.Add(new Flavour(flavourID, name, desc, iconUri));
             }
         }
-        gridFlavour.SetFlavours(manager.AllFlavours);
+        gridManager.SetFlavours(manager.AllFlavours);
         dbCommandReadValue.Dispose();
     }
 
@@ -115,18 +113,18 @@ public class DatabaseManager : MonoBehaviour
             while (dataReader.Read())
             {
                 //Get data from DB
-                int gastroId = dataReader.GetOrdinal("gastromorph_id");
+                int gastroId = dataReader.GetInt32(dataReader.GetOrdinal("gastromorph_id"));
                 string name = (string)dataReader["name"];
                 string desc = (string)dataReader["description"];
                 string biomeIds = (string)dataReader["biome_ids"];
-                string elementIds = (string)dataReader["element_ids"];
+                string elementIds = (string)dataReader["type_ids"];
                 string flavourIds = (string)dataReader["flavour_ids"];
                 string iconUri = (string)dataReader["iconUri"];
                 string animUri = (string)dataReader["modelUri"];
 
                 //Temp lists that will have 1 Gastromorph
                 List<Biome> tempBiomes = new List<Biome>();
-                List<Element> tempElements = new List<Element>();
+                List<Type> tempElements = new List<Type>();
                 List<Flavour> tempFlavours = new List<Flavour>();
 
                 // Check the biomes that the Gastromorph has in the DB and adds it to it list.
@@ -143,7 +141,7 @@ public class DatabaseManager : MonoBehaviour
                 // Check the elements that the Gastromorph has in the DB and adds it to it list.
                 foreach (int elementId in elementIds.Split(",").Select(int.Parse).ToList())
                 {
-                    foreach (Element element in manager.AllElements)
+                    foreach (Type element in manager.AllElements)
                     {
                         if (element.ID == elementId)
                         {
@@ -166,7 +164,7 @@ public class DatabaseManager : MonoBehaviour
                 manager.AllGastromorphs.Add(new(gastroId, name, desc, tempBiomes, tempElements, tempFlavours));
             }
         }
-        gridGastromorph.SetGastromorphs(manager.AllGastromorphs);
+        gridManager.SetGastromorphs(manager.AllGastromorphs);
         dbCommandReadValue.Dispose();
 
     

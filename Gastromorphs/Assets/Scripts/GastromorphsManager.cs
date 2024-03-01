@@ -1,9 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-
-
-
 
 public class GastromorphsManager : MonoBehaviour
 {
@@ -24,8 +20,8 @@ public class GastromorphsManager : MonoBehaviour
     }
 
     [SerializeField]
-    private List<Element> allElements = new();
-    public List<Element> AllElements
+    private List<Type> allElements = new();
+    public List<Type> AllElements
     {
         get { return allElements; }
         private set { allElements = value; }
@@ -38,6 +34,7 @@ public class GastromorphsManager : MonoBehaviour
         get { return allFlavours; }
         private set { allFlavours = value; }
     }
+
 
     public int GastromorphCount
     {
@@ -56,8 +53,13 @@ public class GastromorphsManager : MonoBehaviour
         get { return AllFlavours.Count; }
     }
 
-    private static GastromorphsManager instance;
+    public List<Gastromorph> filteredList = new();
 
+    private List<string> selectedTypes = new();
+    private List<string> selectedBiomes = new();
+    private List<string> selectedFlavours = new();
+
+    private static GastromorphsManager instance;
     public static GastromorphsManager Instance
     {
         get { return instance; }
@@ -69,8 +71,80 @@ public class GastromorphsManager : MonoBehaviour
             Destroy(gameObject);
         else
             instance = this;
+    }
+    private void Start()
+    {
+        filteredList = new List<Gastromorph>(allGastromorphs);
+    }
+    public void ToggleTypes(string type)
+    {
+        if (selectedTypes.Contains(type))
+        {
+            // Toggle off the element filter
+            selectedTypes.Remove(type);
+        }
+        else
+        {
+            // Toggle on the element filter
+            selectedTypes.Add(type);
+        }
 
-       
+        ApplyFilters();
+
+    }
+    public void ToggleFlavours(string flavours)
+    {
+        if (selectedFlavours.Contains(flavours))
+        {
+            // Toggle off the element filter
+            selectedFlavours.Remove(flavours);
+        }
+        else
+        {
+            // Toggle on the element filter
+            selectedFlavours.Add(flavours);
+        }
+        ApplyFilters();
+
+    }
+    public void ToggleBiomes(string biomes)
+    {
+
+        if (selectedBiomes.Contains(biomes))
+        {
+            // Toggle off the element filter
+            selectedBiomes.Remove(biomes);
+        }
+        else
+        {
+            // Toggle on the element filter
+            selectedBiomes.Add(biomes);
+        }
+        ApplyFilters();
+    }
+
+
+    private void ApplyFilters()
+    {
+        filteredList.Clear();
+        foreach (Gastromorph gastromorph in AllGastromorphs)
+        {
+            foreach (Biome biome in gastromorph.Biomes)
+            {
+                if (!selectedBiomes.Contains(biome.Name)) continue;
+            }
+            foreach (Flavour flavour in gastromorph.Flavours)
+            {
+                if (!selectedFlavours.Contains(flavour.Name)) continue;
+
+            }
+            foreach (Type type in gastromorph.Type)
+            {
+                if (!selectedTypes.Contains(type.Name)) continue;
+            }
+
+            filteredList.Add(gastromorph);
+        }
     }
 
     public void InstantiateGastromorph()
