@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -9,8 +10,12 @@ public class AudioManager : MonoBehaviour
     [Header("------------Audio Source --------------")]
     //[SerializeField] AudioSource musicSource;
     //[SerializeField] AudioSource sfxSource;
+    public AudioClip backgroundMusic;
     private AudioSource audioSource;
     public List<AudioClip> clickBoton;
+
+   
+    public Slider volumeSlider;
 
 
     //[Header("------------Audio Clips -------------")]
@@ -44,6 +49,21 @@ public class AudioManager : MonoBehaviour
         ////musicSource.clip = menuTheme;
         //musicSource.Play();
         audioSource = GetComponent<AudioSource>();
+        if (backgroundMusic != null)
+        {
+            AudioSource audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.clip = backgroundMusic;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("No se ha asignado un AudioClip para reproducir como música de fondo.");
+        }
+        if (volumeSlider != null)
+        {
+            volumeSlider.onValueChanged.AddListener(ChangeVolume);
+        }
     }
     public void clickBotton()
     {
@@ -67,6 +87,13 @@ public class AudioManager : MonoBehaviour
     public void scroll()
     {
         audioSource.PlayOneShot(clickBoton[4]);
+    }
+    void ChangeVolume(float volume)
+    {
+        if (audioSource != null)
+        {
+            audioSource.volume = volumeSlider.value;
+        }
     }
     //public void StartGame()
     //{

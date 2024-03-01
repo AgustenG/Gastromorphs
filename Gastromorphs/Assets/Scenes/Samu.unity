@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5135,8 +5135,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1513179061}
   m_HandleRect: {fileID: 1513179060}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.91425407
+  m_Value: 0.9999993
+  m_Size: 0.914254
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11773,6 +11773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0bcde626a5e3184d802159aa257083e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backgroundMusic: {fileID: 8300000, guid: 3ba520eb8e4f2e04dbe3fec9e48b28b7, type: 3}
   clickBoton:
   - {fileID: 8300000, guid: 905c26e60512c3743a3ad31c0f2b56e9, type: 3}
   - {fileID: 8300000, guid: ec9cc5e57dd57044f86d2b30d2c35569, type: 3}
@@ -11780,6 +11781,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4084e48e0bc866d42810caa8aa594bdb, type: 3}
   - {fileID: 8300000, guid: 13dad88b5c4a80948850e630996e31c8, type: 3}
   - {fileID: 8300000, guid: 48b0a09328209b84eabfcb76cb870ca2, type: 3}
+  volumeSlider: {fileID: 7534622065784537455}
 --- !u!4 &1082234414
 Transform:
   m_ObjectHideFlags: 0
@@ -11807,9 +11809,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.495
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -12364,8 +12366,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2008334361}
   m_HandleRect: {fileID: 2008334360}
   m_Direction: 2
-  m_Value: 1.0000007
-  m_Size: 0.66137797
+  m_Value: 1
+  m_Size: 0.66137785
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -19876,8 +19878,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1092105465}
   m_HandleRect: {fileID: 1092105464}
   m_Direction: 2
-  m_Value: 1.0000007
-  m_Size: 0.66137797
+  m_Value: 1
+  m_Size: 0.66137785
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -21489,8 +21491,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 143239124}
   m_HandleRect: {fileID: 143239123}
   m_Direction: 2
-  m_Value: 1.0000007
-  m_Size: 0.66137797
+  m_Value: 1
+  m_Size: 0.66137785
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
