@@ -21,17 +21,16 @@ public class CanvasManager : MonoBehaviour
     [Header("MapButton")]
     [SerializeField] public GameObject mapButton;
 
+    [Header("SettingsButton")]
+    [SerializeField] public GameObject settingsBtn;
+
+    [HideInInspector] public bool mapBtn = false;
+
 
     void Awake()
     {
-        if (instance != null && instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            instance = this;
-        }
+        if (instance != null && instance != this) Destroy(this);
+        else instance = this;
     }
     private void Start()
     {
@@ -43,6 +42,7 @@ public class CanvasManager : MonoBehaviour
         listButton.SetActive(false);
         searchButton.SetActive(false);
         mapButton.SetActive(false);
+        settingsBtn.SetActive(false);
         Time.timeScale = 1f;
     }
     public void startButtons()
@@ -57,14 +57,12 @@ public class CanvasManager : MonoBehaviour
     {
         startMenu.SetActive(false);
         searchView.SetActive(true);
-        Time.timeScale = 0f;
     }
     public void startMap()
     {
         startMenu.SetActive(false);
         searchView.SetActive(false);
         mapView.SetActive(true);
-        Time.timeScale = 0f;
     }
     public void startList()
     {
@@ -72,7 +70,6 @@ public class CanvasManager : MonoBehaviour
         searchView.SetActive(false);
         mapView.SetActive(false);
         listView.SetActive(true);
-        Time.timeScale = 0f;
     }
     public void startGastromorph()
     {
@@ -81,29 +78,30 @@ public class CanvasManager : MonoBehaviour
         mapView.SetActive(false);
         listView.SetActive(false);
         gastromorph.SetActive(true);
-        Time.timeScale = 0f;
     }
     public void volver()
     {
+        settingsBtn.SetActive(false);
         searchView.SetActive(false);
         mapView.SetActive(false);
         listView.SetActive(false);
         gastromorph.SetActive(false);
         startMenu.SetActive(true);
-        Time.timeScale = 0f;
     }
-    public void activeModel()
+
+    public void activateCanvas()
     {
+        startGastromorph();
+    }
+
+    public void startSettings()
+    {
+        settingsBtn.SetActive(true);
         searchView.SetActive(false);
         mapView.SetActive(false);
         listView.SetActive(false);
         gastromorph.SetActive(false);
         startMenu.SetActive(false);
-        Time.timeScale = 1f;
-    }
-    public void activateCanvas()
-    {
-        startGastromorph();
     }
 
     public void ExitGame()
@@ -112,6 +110,5 @@ public class CanvasManager : MonoBehaviour
         #if UNITY_EDITOR
                 UnityEditor.EditorApplication.isPlaying = false;
         #endif
-
     }
 }
