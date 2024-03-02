@@ -7539,6 +7539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa197aeb1e62b134d9143275d47b498b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  splashScreen: {fileID: 0}
   startMenu: {fileID: 1359666223}
   listView: {fileID: 1015361211}
   searchView: {fileID: 1192460331}
