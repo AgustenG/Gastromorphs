@@ -3,13 +3,13 @@ using Mono.Data.Sqlite;
 using System.Data;
 using System.Collections.Generic;
 using System.Linq;
-using TMPro;
 using System.IO;
+using UnityEngine.Networking;
+using System.Collections;
 
 public class DatabaseManager : MonoBehaviour
 {
     IDbConnection dbConnection;
-    IDbCommand dbCommandInsertValue;
     IDbCommand dbCommandReadValue;
 
     [SerializeField] private GridManager gridManager;
@@ -25,12 +25,22 @@ public class DatabaseManager : MonoBehaviour
 
     private void Awake()
     {
-        dbConnection = CreateAndOpenDatabase();
 
 
-        dbCommandInsertValue = dbConnection.CreateCommand();
+#if UNITY_EDITOR        // For Editor
+        dbConnection = GetDBFromStreamingAssets();
+        Debug.Log("Opening From editor");
+#elif UNITY_ANDROID     // For Android  
+        StartCoroutine(SetDatabase());
+        dbConnection = GetDatabaseFromPersistentDataPath();
+        Debug.Log("Opening From Android");
+#else                   // For Windows ? 
+        dbConnection = GetDBFromStreamingAssets();
+        Debug.Log("Opening From windows");
+#endif
+
+        dbConnection.Open();
         dbCommandReadValue = dbConnection.CreateCommand();
-
         SetGastromorphsFromDB();
     }
 
@@ -39,9 +49,6 @@ public class DatabaseManager : MonoBehaviour
         dbConnection.Close();
         Debug.Log("Database disconnected");
     }
-
-
-
     private void SetBiomesFromDB()
     {
         dbCommandReadValue.CommandText = "SELECT * FROM \"main\".\"Biomes\"";
@@ -127,9 +134,9 @@ public class DatabaseManager : MonoBehaviour
                 string animUri = (string)dataReader["modelUri"];
 
                 //Temp lists that will have 1 Gastromorph
-                List<Biome> tempBiomes = new List<Biome>();
-                List<Type> tempElements = new List<Type>();
-                List<Flavour> tempFlavours = new List<Flavour>();
+                List<Biome> tempBiomes = new();
+                List<Type> tempElements = new();
+                List<Flavour> tempFlavours = new();
 
                 // Check the biomes that the Gastromorph has in the DB and adds it to it list.
                 foreach (int biomeId in biomeIds.Split(",").Select(int.Parse).ToList())
@@ -175,45 +182,57 @@ public class DatabaseManager : MonoBehaviour
         Destroy(this);
     }
 
-    private void DataBaseAction(string action)
-    {
-        try
-        {
-            dbCommandInsertValue.CommandText = action;
-            dbCommandInsertValue.ExecuteNonQuery();
-        }
-        catch (System.Exception)
-        {
-            Debug.Log("no");
-            throw;
-        }
-
-    }
     private string SelectAllGastromorphs()
     {
         return "SELECT * FROM \"main\".\"Gastromorphs\"";
     }
-    private string DeleteTableData(string databasename)
+    /// <summary>
+    /// For unity for android
+    /// </summary>
+    /// <returns></returns>
+    private IDbConnection GetDatabaseFromPersistentDataPath()
     {
-        return "DELETE FROM \"main\".\"Gastromorphs\"";
-    }
-    private string InsertAttributeIntoTable(Tables tab, string name, string desc, string iconuri)
-    {
-        string table = tab.ToString();
-        return $"INSERT INTO \"main\".\"{table}\"\r\n(\"name\", \"description\", \"IconUri\")\r\nVALUES ('{name}','{desc}','{iconuri}')";
-    }
-    private string InsertGastromorph(string name, string desc, string biome_ids, string element_ids, string flavour_ids, string iconuri, string modelUri)
-    {
-        return $"INSERT INTO \"main\".\"Gastromorphs\"\r\n(\"name\", \"description\", \"biome_ids\", \"element_ids\", \"flavour_ids\", \"iconUri\", \"modelUri\")\r\nVALUES ('{name}','{desc}','{biome_ids}','{element_ids}','{flavour_ids}','{iconuri}','{modelUri}')";
-    }
-
-    private IDbConnection CreateAndOpenDatabase()
-    {
-        string p = "URI=file:"+ Application.persistentDataPath + "/Mydatabase.db";
-
-        Debug.Log(p);
-        IDbConnection dbConnection = new SqliteConnection(p);
-        dbConnection.Open();
+        string path = "URI=file:" + Application.persistentDataPath + "/Mydatabase.sqlite";
+        IDbConnection dbConnection = new SqliteConnection(path);
         return dbConnection;
+    }
+
+    /// <summary>
+    /// For unity for windows
+    /// </summary>
+    /// <returns></returns>
+    private IDbConnection GetDBFromStreamingAssets()
+    {
+        string dbUri = "URI=file:Assets/StreamingAssets/MyDatabase.sqlite";
+        IDbConnection dbConnection = new SqliteConnection(dbUri);
+        return dbConnection;
+    }
+    private IEnumerator SetDatabase()
+    {
+        string path;
+        // For Android
+        path = "jar:file://" + Application.dataPath + "!/assets/Mydatabase.sqlite";
+
+        if (!File.Exists("URI=file:" + Application.persistentDataPath + "/Mydatabase.sqlite"))
+        {
+            Debug.Log("CREATE DATABASE AGAIN");
+            UnityWebRequest unityWebRequest = UnityWebRequest.Get(path);
+            yield return unityWebRequest.SendWebRequest();
+
+            while (!unityWebRequest.isDone) { }
+
+            if (unityWebRequest.result == UnityWebRequest.Result.Success)
+            {
+                // Retrieve results as binary data.
+                byte[] data = unityWebRequest.downloadHandler.data;
+
+                // Writes the DB in the persistent memory.
+                File.WriteAllBytes(Path.Combine(Application.persistentDataPath, "Mydatabase.sqlite"), data);
+            }
+            else
+            {
+                Debug.LogError("Failed to download database. Error: " + unityWebRequest.error);
+            }
+        }
     }
 }

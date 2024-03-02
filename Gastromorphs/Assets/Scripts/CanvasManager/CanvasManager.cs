@@ -104,9 +104,16 @@ public class CanvasManager : MonoBehaviour
 
     public void ExitGame()
     {
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#elif UNITY_ANDROID
+        AndroidJavaObject activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
+        activity.Call<bool>("moveTaskToBack", true);
+        Debug.Log("Adiós");      
+#else
         Application.Quit();
-        #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-        #endif
+#endif
+
     }
 }

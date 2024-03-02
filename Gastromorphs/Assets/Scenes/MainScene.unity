@@ -5589,7 +5589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 539028851}
-  - component: {fileID: 539028850}
+  - component: {fileID: 539028852}
   m_Layer: 0
   m_Name: DatabaseManager
   m_TagString: Untagged
@@ -5597,21 +5597,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &539028850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 539028849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac5a160150028e148ad5a0c7552adbfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gridManager: {fileID: 850349370}
-  manager: {fileID: 798555728}
-  textMeshProUGUI: {fileID: 1352764650}
 --- !u!4 &539028851
 Transform:
   m_ObjectHideFlags: 0
@@ -5627,6 +5612,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &539028852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539028849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac5a160150028e148ad5a0c7552adbfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 850349370}
+  manager: {fileID: 3251346899024967584}
+  textMeshProUGUI: {fileID: 1352764650}
 --- !u!1 &541725244
 GameObject:
   m_ObjectHideFlags: 0
@@ -8838,18 +8838,6 @@ RectTransform:
   m_AnchoredPosition: {x: 10, y: -536}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &798555728 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 225401859245647970, guid: 8a343a15d15e63140ad667ab2708f195,
-    type: 3}
-  m_PrefabInstance: {fileID: 1163069812}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08a26865f23fc65498d9fbc80401dacd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &801461273
 GameObject:
   m_ObjectHideFlags: 0
@@ -13144,74 +13132,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158208316}
   m_CullTransparentMesh: 1
---- !u!1001 &1163069812
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2537666645010950377, guid: 8a343a15d15e63140ad667ab2708f195,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.35406792
-      objectReference: {fileID: 0}
-    - target: {fileID: 2537666645010950377, guid: 8a343a15d15e63140ad667ab2708f195,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8.872053
-      objectReference: {fileID: 0}
-    - target: {fileID: 2537666645010950377, guid: 8a343a15d15e63140ad667ab2708f195,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -15.9784355
-      objectReference: {fileID: 0}
-    - target: {fileID: 2537666645010950377, guid: 8a343a15d15e63140ad667ab2708f195,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2537666645010950377, guid: 8a343a15d15e63140ad667ab2708f195,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2537666645010950377, guid: 8a343a15d15e63140ad667ab2708f195,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2537666645010950377, guid: 8a343a15d15e63140ad667ab2708f195,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2537666645010950377, guid: 8a343a15d15e63140ad667ab2708f195,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2537666645010950377, guid: 8a343a15d15e63140ad667ab2708f195,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2537666645010950377, guid: 8a343a15d15e63140ad667ab2708f195,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3251346900009385707, guid: 8a343a15d15e63140ad667ab2708f195,
-        type: 3}
-      propertyPath: m_Name
-      value: ManagerGastromorph
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8a343a15d15e63140ad667ab2708f195, type: 3}
 --- !u!1 &1170502868
 GameObject:
   m_ObjectHideFlags: 0
@@ -16409,7 +16329,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gastromorphs
+  m_text: TU MADRE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -25451,6 +25371,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145142803}
   m_CullTransparentMesh: 1
+--- !u!4 &2537666643890217373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3251346899024967583}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.35406792, y: 8.872053, z: -15.9784355}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3104291176596768066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25465,6 +25400,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!1 &3251346899024967583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2537666643890217373}
+  - component: {fileID: 3251346899024967584}
+  m_Layer: 0
+  m_Name: ManagerGastromorph
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &3251346899024967584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3251346899024967583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a26865f23fc65498d9fbc80401dacd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allGastromorphs: []
+  allBiomes: []
+  allElements: []
+  allFlavours: []
+  filteredList: []
 --- !u!1 &4173829405675817510
 GameObject:
   m_ObjectHideFlags: 0
@@ -25535,7 +25504,7 @@ SceneRoots:
   - {fileID: 1623544676}
   - {fileID: 1754077169}
   - {fileID: 539028851}
-  - {fileID: 1163069812}
+  - {fileID: 2537666643890217373}
   - {fileID: 850349369}
   - {fileID: 46445612}
   - {fileID: 1504506551}
