@@ -6,64 +6,29 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    //[DoNotSerialize] public static AudioManager instance;
-    [Header("------------Audio Source --------------")]
-    //[SerializeField] AudioSource musicSource;
-    //[SerializeField] AudioSource sfxSource;
+
+    [Header("------------ Audio Source --------------")]
     public AudioClip backgroundMusic;
     private AudioSource audioSource;
     public List<AudioClip> clickBoton;
 
-   
-    public Slider volumeSlider;
+    [Header("------------ Toggle --------------")]
+    public Toggle musicToggle;
 
-
-    //[Header("------------Audio Clips -------------")]
-
-    //public AudioClip clickButton;
-
-    //public AudioClip menuTheme;
-    //public AudioClip gameTheme;
-    //public AudioClip gameOverTheme;
-    //public AudioClip attack;
-    //public AudioClip jump;
-    //public AudioClip collectCoin;
-    //public AudioClip killEnemy;
-
-
-    //void Awake()
-    //{
-    //    if (instance == null)
-    //    {
-    //        instance = this;
-    //        DontDestroyOnLoad(gameObject);
-
-    //    }
-    //    else Destroy(gameObject);
-    //    musicSource.volume = 0.35f;
-
-    //}
     void Awake()
     {
-        //musicSource.volume = 0.35f;
-        ////musicSource.clip = menuTheme;
-        //musicSource.Play();
-        audioSource = GetComponent<AudioSource>();
-        if (backgroundMusic != null)
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = backgroundMusic;
+        audioSource.loop = true;
+
+        if (musicToggle != null)
         {
-            AudioSource audioSource = gameObject.AddComponent<AudioSource>();
-            audioSource.clip = backgroundMusic;
-            audioSource.loop = true;
-            audioSource.Play();
+            musicToggle.onValueChanged.AddListener(ToggleMusic);
         }
-        else
-        {
-            Debug.LogWarning("No se ha asignado un AudioClip para reproducir como música de fondo.");
-        }
-        if (volumeSlider != null)
-        {
-            volumeSlider.onValueChanged.AddListener(ChangeVolume);
-        }
+    }
+    void Start()
+    {
+        ToggleMusic(musicToggle.isOn);
     }
     public void clickBotton()
     {
@@ -84,56 +49,15 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.PlayOneShot(clickBoton[3]);
     }
-    public void scroll()
+    public void ToggleMusic(bool isOn)
     {
-        audioSource.PlayOneShot(clickBoton[4]);
-    }
-    void ChangeVolume(float volume)
-    {
-        if (audioSource != null)
+        if (isOn)
         {
-            audioSource.volume = volumeSlider.value;
+            audioSource.Play();
+        }
+        else
+        {
+            audioSource.Stop();
         }
     }
-    //public void StartGame()
-    //{
-    //    musicSource.Stop();
-    //    musicSource.clip = gameTheme;
-    //    musicSource.Play();
-    //}
-    //public void StopMusic()
-    //{
-    //    musicSource.Stop();
-    //}
-    //public void StartMenuTheme()
-    //{
-    //    if (sfxSource.isPlaying)
-    //    {
-    //        sfxSource.Stop();
-    //    }
-    //    if (musicSource.isPlaying)
-    //    {
-    //        musicSource.Stop();
-    //    }
-    //    musicSource.clip = menuTheme;
-    //    musicSource.Play();
-    //}
-
-    //public void StartGameOverTheme()
-    //{
-    //    if (sfxSource.isPlaying)
-    //    {
-    //        sfxSource.Stop();
-    //    }
-    //    if (musicSource.isPlaying)
-    //    {
-    //        musicSource.Stop();
-    //    }
-    //    musicSource.clip = gameOverTheme;
-    //    musicSource.Play();
-    //}
-    //public void PlaySFX(AudioClip audio)
-    //{
-    //    sfxSource.PlayOneShot(audio);
-    //}
 }
