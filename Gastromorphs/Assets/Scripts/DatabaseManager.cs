@@ -130,8 +130,8 @@ public class DatabaseManager : MonoBehaviour
                 string biomeIds = (string)dataReader["biome_ids"];
                 string elementIds = (string)dataReader["type_ids"];
                 string flavourIds = (string)dataReader["flavour_ids"];
-                string iconUri = (string)dataReader["iconUri"];
-                string animUri = (string)dataReader["modelUri"];
+                string iconUri = "";//(string)dataReader["iconUri"];
+                string animUri = "";// (string)dataReader["modelUri"];
 
                 //Temp lists that will have 1 Gastromorph
                 List<Biome> tempBiomes = new();
@@ -217,9 +217,10 @@ public class DatabaseManager : MonoBehaviour
         {
             Debug.Log("CREATE DATABASE AGAIN");
             UnityWebRequest unityWebRequest = UnityWebRequest.Get(path);
-            yield return unityWebRequest.SendWebRequest();
 
-            while (!unityWebRequest.isDone) { }
+            unityWebRequest.downloadHandler = new DownloadHandlerBuffer();
+
+            yield return unityWebRequest.SendWebRequest();
 
             if (unityWebRequest.result == UnityWebRequest.Result.Success)
             {
@@ -235,4 +236,7 @@ public class DatabaseManager : MonoBehaviour
             }
         }
     }
+
+
+
 }

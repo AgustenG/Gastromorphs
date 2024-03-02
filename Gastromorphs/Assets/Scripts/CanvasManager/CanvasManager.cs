@@ -41,14 +41,12 @@ public class CanvasManager : MonoBehaviour
         searchButton.SetActive(false);
         mapButton.SetActive(false);
         settingsBtn.SetActive(false);
-        Time.timeScale = 1f;
     }
     public void startButtons()
     {
         listButton.SetActive(!listButton.activeSelf);
         searchButton.SetActive(!searchButton.activeSelf);
         mapButton.SetActive(!mapButton.activeSelf);
-        Time.timeScale = 1f;
     }
 
     public void startSearch()

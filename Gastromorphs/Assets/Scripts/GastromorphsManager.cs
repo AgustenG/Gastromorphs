@@ -1,5 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEditor;
+using Unity.VisualScripting;
+using System;
 
 public class GastromorphsManager : MonoBehaviour
 {
@@ -123,7 +126,15 @@ public class GastromorphsManager : MonoBehaviour
         ApplyFilters();
     }
 
-
+    public Gastromorph GetGastromorphFromId(string id)
+    {
+        foreach (Gastromorph item in allGastromorphs)
+        {
+            if (item.Gastromorph_id == Convert.ToInt32(id))
+                return item;
+        }
+        return null;
+    }
     private void ApplyFilters()
     {
         filteredList.Clear();
