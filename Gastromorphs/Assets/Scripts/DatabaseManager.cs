@@ -222,8 +222,6 @@ public class DatabaseManager : MonoBehaviour
 
             yield return unityWebRequest.SendWebRequest();
 
-            while (!unityWebRequest.isDone) { }
-
             if (unityWebRequest.result == UnityWebRequest.Result.Success)
             {
                 // Retrieve results as binary data.
@@ -238,4 +236,7 @@ public class DatabaseManager : MonoBehaviour
             }
         }
     }
+
+
+
 }

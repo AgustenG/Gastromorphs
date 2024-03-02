@@ -1327,12 +1327,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6efc2dfb02516054e994d18638927beb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 494
+      value: 530
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6efc2dfb02516054e994d18638927beb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6efc2dfb02516054e994d18638927beb,
         type: 3}
@@ -1378,6 +1378,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Frozbuzz
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6efc2dfb02516054e994d18638927beb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1639,12 +1644,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2b588120e97137542bee971ce22c13e7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 494
+      value: 530
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b588120e97137542bee971ce22c13e7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b588120e97137542bee971ce22c13e7,
         type: 3}
@@ -1690,6 +1695,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tonglef
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2b588120e97137542bee971ce22c13e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2162,12 +2172,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0cb2df8f01359504a88f5314088a349f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 494
+      value: 530
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0cb2df8f01359504a88f5314088a349f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0cb2df8f01359504a88f5314088a349f,
         type: 3}
@@ -2213,6 +2223,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Steakvolt
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0cb2df8f01359504a88f5314088a349f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13257,12 +13272,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 39c84d22ff4a3ae45b82b09884125a17,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 494
+      value: 530
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39c84d22ff4a3ae45b82b09884125a17,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39c84d22ff4a3ae45b82b09884125a17,
         type: 3}
@@ -13308,6 +13323,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PimientoRojo
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 39c84d22ff4a3ae45b82b09884125a17,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17714,7 +17734,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
+  m_VolumeFrameworkUpdateModeOption: 0
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
@@ -17754,7 +17774,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.46342114, g: 0.58404034, b: 0.7735849, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -17777,7 +17797,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 3000
-  field of view: 20.2
+  field of view: 12.6
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -17803,13 +17823,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504506547}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.079798035, y: -0, z: -0, w: 0.99681103}
-  m_LocalPosition: {x: 507, y: 273, z: -490}
+  m_LocalRotation: {x: 0.09104815, y: -0, z: -0, w: 0.9958465}
+  m_LocalPosition: {x: 536, y: 451, z: -1387}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 9.154, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10.448, y: 0, z: 0}
 --- !u!1 &1511908006
 GameObject:
   m_ObjectHideFlags: 0
@@ -19163,12 +19183,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c4bd57baa61efbf48bacd8d4387b2d0a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 494
+      value: 530
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4bd57baa61efbf48bacd8d4387b2d0a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4bd57baa61efbf48bacd8d4387b2d0a,
         type: 3}
@@ -19214,6 +19234,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Nectron
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c4bd57baa61efbf48bacd8d4387b2d0a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20137,12 +20162,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3f0e3c898b3375f439fa54884c4f3501,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 494
+      value: 530
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f0e3c898b3375f439fa54884c4f3501,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f0e3c898b3375f439fa54884c4f3501,
         type: 3}
@@ -20188,6 +20213,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pretzel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3f0e3c898b3375f439fa54884c4f3501,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22060,12 +22090,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 12646ceb1a8e48041bbe2497d3cc29d8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 494
+      value: 530
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12646ceb1a8e48041bbe2497d3cc29d8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12646ceb1a8e48041bbe2497d3cc29d8,
         type: 3}
@@ -22111,6 +22141,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Eggplantaur
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12646ceb1a8e48041bbe2497d3cc29d8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22811,12 +22846,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7e7908c66d15edb44ab75343d4a8585d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 494
+      value: 530
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e7908c66d15edb44ab75343d4a8585d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e7908c66d15edb44ab75343d4a8585d,
         type: 3}
@@ -22862,6 +22897,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bivaltus
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7e7908c66d15edb44ab75343d4a8585d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24246,12 +24286,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 80fe59474c77881419a5c312bd541ba6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 494
+      value: 530
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 80fe59474c77881419a5c312bd541ba6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 80fe59474c77881419a5c312bd541ba6,
         type: 3}
@@ -24297,6 +24337,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pizza
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 80fe59474c77881419a5c312bd541ba6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
