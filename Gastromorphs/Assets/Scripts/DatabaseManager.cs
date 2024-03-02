@@ -209,21 +209,10 @@ public class DatabaseManager : MonoBehaviour
 
     private IDbConnection CreateAndOpenDatabase()
     {
-        string p = "Mydatabase.db";
-        string dbUri = $"URI=file:{Application.streamingAssetsPath}/Mydatabase.db";
-        string android = "URI=file:" + Application.persistentDataPath + "/" + p;
+        string p = "URI=file:"+ Application.persistentDataPath + "/Mydatabase.db";
 
-
-
-        string path = "jar:file://" + Application.dataPath + "!/assets/Mydatabase.db";
-
-        WWW wwwfile = new WWW(path);
-        while(wwwfile.isDone) { }
-        var filepath = string.Format("{0}/{1}", Application.persistentDataPath, "Mydatabase.db");
-        File.WriteAllBytes(filepath, wwwfile.bytes);
-        
-
-        IDbConnection dbConnection = new SqliteConnection(filepath);
+        Debug.Log(p);
+        IDbConnection dbConnection = new SqliteConnection(p);
         dbConnection.Open();
         return dbConnection;
     }
