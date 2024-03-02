@@ -7,7 +7,7 @@ public class MapController : MonoBehaviour
     public float seconds;
     public GameObject Icon;
 
-    private void Awake()
+    private void OnEnable()
     {
         Icon.SetActive(false);
     }

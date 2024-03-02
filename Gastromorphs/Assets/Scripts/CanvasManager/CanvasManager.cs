@@ -87,6 +87,8 @@ public class CanvasManager : MonoBehaviour
         listView.SetActive(false);
         gastromorph.SetActive(false);
         startMenu.SetActive(true);
+        StopAllCoroutines();
+        mapBtn = false;
     }
 
     public void activateCanvas()
