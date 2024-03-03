@@ -176,6 +176,7 @@ public class DatabaseManager : MonoBehaviour
             }
         }
         gridManager.SetGastromorphs(manager.AllGastromorphs);
+        gridManager.TogglesListeners();
         dbCommandReadValue.Dispose();
 
 
