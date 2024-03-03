@@ -10,7 +10,6 @@ public class SingleGastroPage : MonoBehaviour
     [SerializeField] TextMeshProUGUI gastromorphName;
     [SerializeField] TextMeshProUGUI gastromorphDescription;
     [SerializeField] GameObject banner;
-    [SerializeField] GameObject InstantiatePlace;
 
     private Sprite[] Sprites;
 
@@ -22,6 +21,21 @@ public class SingleGastroPage : MonoBehaviour
         Instance = this;
 
     }
+
+    //public void SetGastromorphAttributes(Gastromorph gastromorph)
+    //{
+    //    foreach (Biome biome in gastromorph.Biomes)
+    //    {
+    //        GameObject go = Instantiate(gastromorphPrefab, parentContent[(int)Parents.Gastromorph].transform);
+    //        go.SetActive(true);
+
+    //        go.GetComponentsInChildren<Image>(true)[1].sprite = Resources.Load<Sprite>($"Gastromorphs/{gastromorph.Name}");
+
+    //        go.GetComponentsInChildren<TextMeshProUGUI>()[0].text = gastromorph.Gastromorph_id.ToString();
+    //        go.GetComponentsInChildren<TextMeshProUGUI>()[1].text = gastromorph.Name;
+    //    }
+
+    //}
     public void OpenGastromorph(Gastromorph gastromorph)
     {
         if (gastromorph == null) return;
