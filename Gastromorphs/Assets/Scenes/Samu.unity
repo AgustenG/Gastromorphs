@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3183,7 +3183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b154a550130907e4d851fbc18eca240d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 519418714498307844, guid: 70d0956a89c36964eaf8990ca0084162, type: 3}
+  toggablePrefab: {fileID: 0}
+  gastromorphPrefab: {fileID: 0}
+  parentContent: []
 --- !u!1 &231831993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3676,7 +3678,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b154a550130907e4d851fbc18eca240d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 519418714498307844, guid: 70d0956a89c36964eaf8990ca0084162, type: 3}
+  toggablePrefab: {fileID: 0}
+  gastromorphPrefab: {fileID: 0}
+  parentContent: []
 --- !u!1 &291884184
 GameObject:
   m_ObjectHideFlags: 0
@@ -6780,10 +6784,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac5a160150028e148ad5a0c7552adbfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridGastromorph: {fileID: 0}
-  gridBiome: {fileID: 0}
-  gridElement: {fileID: 0}
-  gridFlavour: {fileID: 0}
+  gridManager: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!4 &539028851
 Transform:
   m_ObjectHideFlags: 0
@@ -8589,10 +8591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08a26865f23fc65498d9fbc80401dacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allGastromorphs: []
-  allBiomes: []
-  allElements: []
-  allFlavours: []
+  filteredList: []
 --- !u!4 &783459044
 Transform:
   m_ObjectHideFlags: 0
@@ -8868,7 +8867,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b154a550130907e4d851fbc18eca240d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 519418714498307844, guid: 70d0956a89c36964eaf8990ca0084162, type: 3}
+  toggablePrefab: {fileID: 0}
+  gastromorphPrefab: {fileID: 0}
+  parentContent: []
 --- !u!114 &801391608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9692,7 +9693,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -12880,7 +12882,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -21258,7 +21261,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -24637,7 +24641,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
