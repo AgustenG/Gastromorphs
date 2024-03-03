@@ -43,19 +43,24 @@ public class GridManager : MonoBehaviour
     {
         instance = this;
     }
-
     public void TogglesListeners()
     {
-        //inputField = GameObject.FindGameObjectWithTag("TextInput").GetComponent<TMP_InputField>();
         inputField.onValueChanged.AddListener(GetInputText);
 
-        //filterToggles = new List<Toggle>();
-        filterTogglesObjs = new List<GameObject>(GameObject.FindGameObjectsWithTag("FilterToggle"));
-        Debug.Log(filterTogglesObjs.Count);
+        foreach (GameObject item in parentContent)
+        {
+            if (item.name == parentContent[0].name) continue;
+
+            for (int i = 0; i < item.transform.childCount; i++)
+                filterTogglesObjs.Add(item.transform.GetChild(i).gameObject);
+        }
+
         int count = 0;
         foreach (GameObject obj in filterTogglesObjs)
         {
+            Debug.Log(obj);
             filterToggles.Add(obj.GetComponent<Toggle>());
+            Debug.Log(obj.GetComponent<Toggle>());
             filterToggles[count].onValueChanged.AddListener(OnToggleValueChanged);
             count++;
         }
