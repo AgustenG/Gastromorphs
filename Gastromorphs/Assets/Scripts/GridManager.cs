@@ -10,6 +10,7 @@ public class GridManager : MonoBehaviour
 {
     public GameObject toggablePrefab;
     public GameObject gastromorphPrefab;
+    public GameObject gastromorphPrefabSimple;
     private List<GameObject> filterTogglesObjs = new List<GameObject>();
     private string textInput;
     [SerializeField] private TMP_InputField inputField;
@@ -25,7 +26,8 @@ public class GridManager : MonoBehaviour
         Gastromorph = 0,
         Type = 1,
         Biome = 2,
-        Flavour = 3
+        Flavour = 3,
+        GastroIcon = 4
     }
 
     private static GridManager instance;
@@ -49,7 +51,7 @@ public class GridManager : MonoBehaviour
 
         foreach (GameObject item in parentContent)
         {
-            if (item.name == parentContent[0].name) continue;
+            if (item.name == parentContent[0].name || item.name == parentContent[4].name) continue;
 
             for (int i = 0; i < item.transform.childCount; i++)
                 filterTogglesObjs.Add(item.transform.GetChild(i).gameObject);
@@ -73,6 +75,21 @@ public class GridManager : MonoBehaviour
     {
         textInput = filterText;
         FilterGastromorphs();
+    }
+
+    public void SetIconsGastromorphs(List<Gastromorph> gastromorphsList)
+    {
+        foreach (Gastromorph gastromorph in gastromorphsList)
+        {
+            GameObject go = Instantiate(gastromorphPrefabSimple, parentContent[(int)Parents.GastroIcon].transform);
+            go.SetActive(true);
+
+            go.GetComponentsInChildren<Image>(true)[1].sprite = Resources.Load<Sprite>($"Gastromorphs/{gastromorph.Name}");
+
+            go.GetComponentInChildren<TextMeshProUGUI>().text = gastromorph.Gastromorph_id.ToString();
+
+            instantiatedGastromorphs.Add(go);
+        }
     }
 
     public void SetGastromorphs(List<Gastromorph> gastromorphsList)
@@ -161,7 +178,7 @@ public class GridManager : MonoBehaviour
             {           
                 foreach (string attFilter in attFilters)
                 {
-                    Debug.Log(attFilter);
+                    //Debug.Log(attFilter);
                     foreach (Biome biome in gastromorph.Biomes)
                     {
                         if (biome.Name == attFilter)
