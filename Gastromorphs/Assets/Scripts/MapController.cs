@@ -1,13 +1,12 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class MapController : MonoBehaviour 
 {
     public float seconds;
     public GameObject Icon;
 
-    private void Awake()
+    private void OnEnable()
     {
         Icon.SetActive(false);
     }
@@ -29,5 +28,6 @@ public class MapController : MonoBehaviour
         CanvasManager.instance.startSearch();
         Debug.Log(gameObject.transform.parent.gameObject.name);
         CanvasManager.instance.mapBtn = false;
+        CanvasManager.instance.returnMap = true;
     }
 }
