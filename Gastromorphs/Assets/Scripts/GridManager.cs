@@ -1,15 +1,24 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR;
+using static UnityEngine.Rendering.DebugUI;
 
 public class GridManager : MonoBehaviour
 {
     public GameObject toggablePrefab;
     public GameObject gastromorphPrefab;
+    private List<GameObject> filterTogglesObjs;
+    private string textInput;
+    private TMP_InputField inputField;
+    List<Toggle> filterToggles;
+    List<GameObject> instantiatedGastromorphs = new List<GameObject>();
 
     [Tooltip("g0,t1,b2,f3")]
     [SerializeField] GameObject[] parentContent;
+    [SerializeField] GastromorphsManager gManager;
 
     private enum Parents
     {
@@ -25,24 +34,173 @@ public class GridManager : MonoBehaviour
         get { return instance; }
     }
 
+    private void Start()
+    {
+        textInput = "";
+    }
+
     private void Awake()
     {
         instance = this;
 
+        inputField = GameObject.FindGameObjectWithTag("TextInput").GetComponent<TMP_InputField>();
+        inputField.onValueChanged.AddListener(GetInputText);
+
+        filterToggles = new List<Toggle>();
+        filterTogglesObjs = new List<GameObject>(GameObject.FindGameObjectsWithTag("FilterToggle"));
+        int count = 0;
+        foreach (GameObject obj in filterTogglesObjs)
+        {
+            filterToggles.Add(obj.GetComponent<Toggle>());
+            filterToggles[count].onValueChanged.AddListener(OnToggleValueChanged);
+            count++;
+        }
     }
 
-    public void SetGastromorphs(List<Gastromorph> gastromorphs)
+    private void OnToggleValueChanged(bool isOn)
     {
-        foreach (Gastromorph gastromorph in gastromorphs)
+        FilterGastromorphs();
+    }
+
+    void GetInputText(string filterText)
+    {
+        Debug.Log(filterText);
+        textInput = filterText;
+        FilterGastromorphs();
+    }
+
+    public void SetGastromorphs(List<Gastromorph> gastromorphsList)
+    {
+        foreach (Gastromorph gastromorph in gastromorphsList)
         {
             GameObject go = Instantiate(gastromorphPrefab, parentContent[(int)Parents.Gastromorph].transform);
             go.SetActive(true);
 
             go.GetComponentsInChildren<Image>(true)[1].sprite = Resources.Load<Sprite>($"Gastromorphs/{gastromorph.Name}");
-           
+
             go.GetComponentsInChildren<TextMeshProUGUI>()[0].text = gastromorph.Gastromorph_id.ToString();
             go.GetComponentsInChildren<TextMeshProUGUI>()[1].text = gastromorph.Name;
+
+            instantiatedGastromorphs.Add(go);
         }
+    }
+
+    public void FilterGastromorphs()
+    {
+        foreach (GameObject go in instantiatedGastromorphs)
+        {
+            Destroy(go);
+        }
+
+        List<Gastromorph> gastromorphs = gManager.AllGastromorphs;
+        List<Gastromorph> filteredGastromorphs = new List<Gastromorph>();
+
+        string textFilters = textInput;
+
+        List<string> attFilters = new List<string>();
+
+        foreach (Toggle toggle in filterToggles)
+        {
+            if (toggle.isOn)
+            {
+                attFilters.Add(toggle.gameObject.GetComponentInChildren<TextMeshProUGUI>().text);
+            }
+        }
+
+        int filtersCount = attFilters.Count;
+        int hasFiltersCount = 0;
+        bool textMatch = false;
+
+        foreach (Gastromorph gastromorph in gastromorphs)
+        {
+            if (textFilters != null)
+            {
+                Debug.Log("Hola 1");
+                if (gastromorph.Name.ToLower().Contains(textFilters.ToLower()) || gastromorph.Gastromorph_id.ToString().Contains(textFilters))
+                {
+                    Debug.Log("Hola 2");
+                    if (attFilters.Count > 0)
+                    {
+                        Debug.Log("Hola 3");
+                        foreach (string attFilter in attFilters)
+                        {
+                            foreach (Biome biome in gastromorph.Biomes)
+                            {
+                                if (biome.Name == attFilter)
+                                {
+                                    hasFiltersCount++;
+                                }
+                            }
+
+                            foreach (Flavour flavour in gastromorph.Flavours)
+                            {
+                                if (flavour.Name == attFilter)
+                                {
+                                    hasFiltersCount++;
+                                }
+                            }
+
+                            foreach (Type type in gastromorph.Type)
+                            {
+                                if (type.Name == attFilter)
+                                {
+                                    hasFiltersCount++;
+                                }
+                            }
+                        }
+                    }
+                    textMatch = true;
+                }
+                else textMatch = false;
+            }
+            else if (attFilters.Count > 0)
+            {
+                foreach (string attFilter in attFilters)
+                {
+                    foreach (Biome biome in gastromorph.Biomes)
+                    {
+                        if (biome.Name == attFilter)
+                        {
+                            hasFiltersCount++;
+                        }
+                    }
+
+                    foreach (Flavour flavour in gastromorph.Flavours)
+                    {
+                        if (flavour.Name == attFilter)
+                        {
+                            hasFiltersCount++;
+                        }
+                    }
+
+                    foreach (Type type in gastromorph.Type)
+                    {
+                        if (type.Name == attFilter)
+                        {
+                            hasFiltersCount++;
+                        }
+                    }
+                }
+            }
+            else textMatch = true;
+
+            if (textMatch)
+            {
+                if (filtersCount > 0)
+                {
+                    if (hasFiltersCount == filtersCount)
+                    {
+                        filteredGastromorphs.Add(gastromorph);
+                    }
+                }
+                else
+                {
+                    filteredGastromorphs.Add(gastromorph);
+                }
+            }
+        }
+
+        SetGastromorphs(filteredGastromorphs);
     }
 
     public void SetBiomes(List<Biome> biomes)
@@ -52,8 +210,8 @@ public class GridManager : MonoBehaviour
             GameObject go = Instantiate(toggablePrefab, parentContent[(int)Parents.Biome].transform);
             go.SetActive(true);
 
-           go.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>($"Biomes/{biome.Name}");
-
+            go.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>($"Biomes/{biome.Name}");
+            go.GetComponentInChildren<TextMeshProUGUI>().text = biome.Name;
         }
     }
     public void SetTypes(List<Type> types)
@@ -65,7 +223,7 @@ public class GridManager : MonoBehaviour
             go.SetActive(true);
 
             go.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>($"Types/{type.Name}");
-
+            go.GetComponentInChildren<TextMeshProUGUI>().text = type.Name;
         }
 
     }
@@ -78,7 +236,7 @@ public class GridManager : MonoBehaviour
             go.SetActive(true);
 
             go.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>($"Flavours/{flavour.Name}");
-
+            go.GetComponentInChildren<TextMeshProUGUI>().text = flavour.Name;
         }
     }
 }
