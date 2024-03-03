@@ -73,10 +73,10 @@ public class CanvasManager : MonoBehaviour
         mapView.SetActive(false);
         listView.SetActive(true);
     }
-    public void startGastromorph(bool isFromList)
+    public void startGastromorph(bool isFromSearch)
     {
-        if (isFromList) returnList = true;
-        else returnSearch = true;
+        if (isFromSearch) returnSearch = true;
+        else returnList = true;
         ActiveGastroPage();
     }
 
