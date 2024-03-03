@@ -1,5 +1,7 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MapController : MonoBehaviour 
 {
@@ -26,7 +28,14 @@ public class MapController : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         Icon.gameObject.SetActive(false);
         CanvasManager.instance.startSearch();
-        Debug.Log(gameObject.transform.parent.gameObject.name);
+        foreach (Toggle toggle in GridManager.Instance.filterToggles)
+        {
+            if (toggle.gameObject.GetComponentInChildren<TextMeshProUGUI>().text == gameObject.transform.parent.gameObject.name)
+            {
+                toggle.isOn = true;
+            }
+            else toggle.isOn = false;
+        }
         CanvasManager.instance.mapBtn = false;
     }
 }

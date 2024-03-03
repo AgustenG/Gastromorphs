@@ -10,11 +10,11 @@ public class GridManager : MonoBehaviour
 {
     public GameObject toggablePrefab;
     public GameObject gastromorphPrefab;
-    private List<GameObject> filterTogglesObjs;
+    private List<GameObject> filterTogglesObjs = new List<GameObject>();
     private string textInput;
-    private TMP_InputField inputField;
-    List<Toggle> filterToggles;
-    List<GameObject> instantiatedGastromorphs = new List<GameObject>();
+    [SerializeField] private TMP_InputField inputField;
+    [HideInInspector] public List<Toggle> filterToggles = new List<Toggle>();
+    private List<GameObject> instantiatedGastromorphs = new List<GameObject>();
 
     [Tooltip("g0,t1,b2,f3")]
     [SerializeField] GameObject[] parentContent;
@@ -42,12 +42,16 @@ public class GridManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+    }
 
-        inputField = GameObject.FindGameObjectWithTag("TextInput").GetComponent<TMP_InputField>();
+    public void TogglesListeners()
+    {
+        //inputField = GameObject.FindGameObjectWithTag("TextInput").GetComponent<TMP_InputField>();
         inputField.onValueChanged.AddListener(GetInputText);
 
-        filterToggles = new List<Toggle>();
+        //filterToggles = new List<Toggle>();
         filterTogglesObjs = new List<GameObject>(GameObject.FindGameObjectsWithTag("FilterToggle"));
+        Debug.Log(filterTogglesObjs.Count);
         int count = 0;
         foreach (GameObject obj in filterTogglesObjs)
         {
@@ -91,6 +95,8 @@ public class GridManager : MonoBehaviour
         {
             Destroy(go);
         }
+
+        Debug.Log("Hola");
 
         List<Gastromorph> gastromorphs = gManager.AllGastromorphs;
         List<Gastromorph> filteredGastromorphs = new List<Gastromorph>();
@@ -155,6 +161,7 @@ public class GridManager : MonoBehaviour
             }
             else if (attFilters.Count > 0)
             {
+                Debug.Log("Hola 4");
                 foreach (string attFilter in attFilters)
                 {
                     foreach (Biome biome in gastromorph.Biomes)

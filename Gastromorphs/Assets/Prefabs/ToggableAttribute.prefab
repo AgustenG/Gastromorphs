@@ -292,20 +292,7 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3608881340654309458, guid: 8a343a15d15e63140ad667ab2708f195,
-          type: 3}
-        m_TargetAssemblyTypeName: GastromorphsManager, Assembly-CSharp
-        m_MethodName: ToggleTypes
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 0
 --- !u!1 &7855563690408090717
 GameObject:
