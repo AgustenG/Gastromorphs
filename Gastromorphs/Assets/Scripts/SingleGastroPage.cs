@@ -12,6 +12,7 @@ public class SingleGastroPage : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI gastromorphName;
     [SerializeField] TextMeshProUGUI gastromorphDescription;
+    [SerializeField] TextMeshProUGUI gastromorphID;
     [SerializeField] GameObject banner;
 
     [SerializeField] GameObject attributePrefab;
@@ -30,22 +31,7 @@ public class SingleGastroPage : MonoBehaviour
 
     public void SetGastromorphAttributes(Gastromorph gastromorph)
     {
-        for (int i = 0; i < biomeContent.transform.childCount; i++)
-        {
-            GameObject child = biomeContent.transform.GetChild(i).gameObject;
-            Destroy(child);
-        }
-        for (int i = 0; i < flavourContent.transform.childCount; i++)
-        {
-            GameObject child = flavourContent.transform.GetChild(i).gameObject;
-            Destroy(child);
-        }
-        for (int i = 0; i < typeContent.transform.childCount; i++)
-        {
-            GameObject child = typeContent.transform.GetChild(i).gameObject;
-            Destroy(child);
-        }
-
+        DeletePastGastromorphs();
 
         foreach (Biome biome in gastromorph.Biomes)
         {
@@ -70,13 +56,32 @@ public class SingleGastroPage : MonoBehaviour
         }
     }
 
+    private void DeletePastGastromorphs()
+    {
+        for (int i = 0; i < biomeContent.transform.childCount; i++)
+        {
+            GameObject child = biomeContent.transform.GetChild(i).gameObject;
+            Destroy(child);
+        }
+        for (int i = 0; i < flavourContent.transform.childCount; i++)
+        {
+            GameObject child = flavourContent.transform.GetChild(i).gameObject;
+            Destroy(child);
+        }
+        for (int i = 0; i < typeContent.transform.childCount; i++)
+        {
+            GameObject child = typeContent.transform.GetChild(i).gameObject;
+            Destroy(child);
+        }
+
+    }
 
     public void OpenGastromorph(Gastromorph gastromorph)
     {
         if (gastromorph == null) return;
         gastromorphName.text = gastromorph.Name;
         gastromorphDescription.text = gastromorph.Description;
-
+        gastromorphID.text = gastromorph.Gastromorph_id.ToString();
 
         Sprites = Resources.LoadAll<Sprite>("Biomes/Elements");
         Sprite sprite = GetSpriteByName(gastromorph.Biomes[0].Name);

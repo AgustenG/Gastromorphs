@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 364f95575637f427db58d3be773e7245
+guid: fe868b7fc893d4582aeb04a3ae327d2f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,38 +7,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BocaChuleta
-    second: {fileID: 2100000, guid: 9b57d71d155bb4225a16ec42394f32ce, type: 2}
+      name: Brazalete
+    second: {fileID: 2100000, guid: 1f8ff57ac036240e69b0f0b84db74b3d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CarneChuleta
-    second: {fileID: 2100000, guid: d2436ec740c6f467e8eaedb8ee4b2d97, type: 2}
+      name: Dientes.001
+    second: {fileID: 2100000, guid: 90606758f96c449ac8b6cac5774279bf, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: HuesoChuleta
-    second: {fileID: 2100000, guid: 156f05c0915164e628c0046bb1778b97, type: 2}
+      name: Material.006
+    second: {fileID: 2100000, guid: 87dfeb14395ad455aac977db743cf118, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: LenguaChuleta
-    second: {fileID: 2100000, guid: 1083342857b544609ab0d8c6424b3b90, type: 2}
+      name: Ojo
+    second: {fileID: 2100000, guid: a523eb7bc936c44f9a16b512cf910973, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: NegroOjosChuleta
-    second: {fileID: 2100000, guid: 3e444b2a0f0ba4c81b56eb1e1bd9c2ea, type: 2}
+      name: Pimiento
+    second: {fileID: 2100000, guid: c9b0b791124014d0db101a8ea1829471, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: OjosChuleta
-    second: {fileID: 2100000, guid: c3d51da45603549ed8a59c27dc9f76b9, type: 2}
+      name: Pupila.001
+    second: {fileID: 2100000, guid: f95f51669f1484cd6926122ca28f1e46, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: RojoChuleta
-    second: {fileID: 2100000, guid: 35268f2e5884b44a7ae81513c165d5d3, type: 2}
+      name: Verde
+    second: {fileID: 2100000, guid: cbd0c3c6ceeaf42cfaf58785616fd664, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -66,11 +66,40 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: GuindilavaIdle
+      takeName: Metarig|MetarigAction
+      internalID: -3142287438495536549
+      firstFrame: 0
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 15
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -125,7 +154,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 15
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
