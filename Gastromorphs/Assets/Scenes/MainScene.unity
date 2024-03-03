@@ -26145,10 +26145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08a26865f23fc65498d9fbc80401dacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allGastromorphs: []
-  allBiomes: []
-  allElements: []
-  allFlavours: []
   filteredList: []
 --- !u!222 &3277888053907809381
 CanvasRenderer:
@@ -27493,7 +27489,6 @@ MonoBehaviour:
   gastromorphName: {fileID: 6086826574904066872}
   gastromorphDescription: {fileID: 2580791204066303470}
   banner: {fileID: 7112404444142598032}
-  InstantiatePlace: {fileID: 0}
 --- !u!1 &9117515797622553287
 GameObject:
   m_ObjectHideFlags: 0

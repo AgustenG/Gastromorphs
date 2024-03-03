@@ -1806,7 +1806,7 @@ MonoBehaviour:
   content: {fileID: 8488686242705432268}
   gastromorphName: {fileID: 8236976106159097847}
   gastromorphDescription: {fileID: 425468430879938849}
-  InstantiatePlace: {fileID: 0}
+  banner: {fileID: 0}
 --- !u!1 &7438502713923072510
 GameObject:
   m_ObjectHideFlags: 0
