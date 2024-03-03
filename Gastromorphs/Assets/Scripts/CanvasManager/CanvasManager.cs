@@ -25,6 +25,8 @@ public class CanvasManager : MonoBehaviour
 
     [HideInInspector] public bool mapBtn = false;
     [HideInInspector] public bool returnMap = false;
+    [HideInInspector] public bool returnList = false;
+    [HideInInspector] public bool returnSearch = false;
 
 
     void Awake()
@@ -71,7 +73,14 @@ public class CanvasManager : MonoBehaviour
         mapView.SetActive(false);
         listView.SetActive(true);
     }
-    public void startGastromorph()
+    public void startGastromorph(bool isFromList)
+    {
+        if (isFromList) returnList = true;
+        else returnSearch = true;
+        ActiveGastroPage();
+    }
+
+    private void ActiveGastroPage()
     {
         startMenu.SetActive(false);
         searchView.SetActive(false);
@@ -79,20 +88,31 @@ public class CanvasManager : MonoBehaviour
         listView.SetActive(false);
         gastromorph.SetActive(true);
     }
+
     public void volver()
     {
-        if(returnMap) { startMap(); returnMap = false; return; }
-        settingsBtn.SetActive(false);
-        searchView.SetActive(false);
-        mapView.SetActive(false);
-        listView.SetActive(false);
-        gastromorph.SetActive(false);
-        startMenu.SetActive(true);
-        StopAllCoroutines();
-        mapBtn = false;
+        if (!CheckReturnBool())
+        {
+            settingsBtn.SetActive(false);
+            searchView.SetActive(false);
+            mapView.SetActive(false);
+            listView.SetActive(false);
+            gastromorph.SetActive(false);
+            startMenu.SetActive(true);
+            StopAllCoroutines();
+            mapBtn = false;
+        }
     }
 
-    public void activateCanvas() { startGastromorph(); }
+    private bool CheckReturnBool() 
+    {
+        if (returnMap) { startMap(); returnMap = false; return true; }
+        if (returnList) { startList(); returnList = false; return true; }
+        if (returnSearch) { startSearch(); returnSearch = false; return true; }
+        return false;
+    }
+
+    //public void activateCanvas() { startGastromorph(/*3*/ false); }
 
     public void startSettings()
     {

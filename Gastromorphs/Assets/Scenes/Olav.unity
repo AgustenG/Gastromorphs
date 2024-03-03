@@ -7549,6 +7549,9 @@ MonoBehaviour:
   mapButton: {fileID: 1621872208}
   settingsBtn: {fileID: 1845864156}
   mapBtn: 0
+  returnMap: 0
+  returnList: 0
+  returnSearch: 0
 --- !u!4 &641610352
 Transform:
   m_ObjectHideFlags: 0
