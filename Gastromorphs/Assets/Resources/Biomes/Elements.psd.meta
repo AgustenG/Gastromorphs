@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nevado
+      name: Snowvalley
       rect:
         serializedVersion: 2
         x: 552
@@ -207,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oceano
+      name: Ocean
       rect:
         serializedVersion: 2
         x: 1621

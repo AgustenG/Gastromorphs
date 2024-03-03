@@ -40,8 +40,8 @@ public class GridManager : MonoBehaviour
 
             go.GetComponentsInChildren<Image>(true)[1].sprite = Resources.Load<Sprite>($"Gastromorphs/{gastromorph.Name}");
            
-            go.GetComponentsInChildren<TextMeshProUGUI>()[0].text = gastromorph.Gastromorph_id.ToString();
-            go.GetComponentsInChildren<TextMeshProUGUI>()[1].text = gastromorph.Name;
+            go.GetComponentsInChildren<TextMeshProUGUI>()[0].text = gastromorph.Name;
+            go.GetComponentsInChildren<TextMeshProUGUI>()[1].text = gastromorph.Gastromorph_id.ToString();
         }
     }
 

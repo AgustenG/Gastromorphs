@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5611487922551569190}
   - component: {fileID: 3097798061250687188}
   m_Layer: 5
-  m_Name: ToggableType
+  m_Name: ToggableAttributeSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
