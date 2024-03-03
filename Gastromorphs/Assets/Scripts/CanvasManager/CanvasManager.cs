@@ -20,7 +20,6 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] private GameObject searchButton;
     [Header("MapButton")]
     [SerializeField] private GameObject mapButton;
-
     [Header("SettingsButton")]
     [SerializeField] public GameObject settingsBtn;
 
@@ -91,10 +90,7 @@ public class CanvasManager : MonoBehaviour
         mapBtn = false;
     }
 
-    public void activateCanvas()
-    {
-        startGastromorph();
-    }
+    public void activateCanvas() { startGastromorph(); }
 
     public void startSettings()
     {
