@@ -13,7 +13,7 @@ public class GridManager : MonoBehaviour
     private List<GameObject> filterTogglesObjs = new List<GameObject>();
     private string textInput;
     [SerializeField] private TMP_InputField inputField;
-    [HideInInspector] public List<Toggle> filterToggles = new List<Toggle>();
+    public List<Toggle> filterToggles = new List<Toggle>();
     private List<GameObject> instantiatedGastromorphs = new List<GameObject>();
 
     [Tooltip("g0,t1,b2,f3")]
@@ -58,9 +58,7 @@ public class GridManager : MonoBehaviour
         int count = 0;
         foreach (GameObject obj in filterTogglesObjs)
         {
-            Debug.Log(obj);
-            filterToggles.Add(obj.GetComponent<Toggle>());
-            Debug.Log(obj.GetComponent<Toggle>());
+            filterToggles.Add(obj.GetComponent<Toggle>());          
             filterToggles[count].onValueChanged.AddListener(OnToggleValueChanged);
             count++;
         }
@@ -73,7 +71,6 @@ public class GridManager : MonoBehaviour
 
     void GetInputText(string filterText)
     {
-        Debug.Log(filterText);
         textInput = filterText;
         FilterGastromorphs();
     }
@@ -87,8 +84,8 @@ public class GridManager : MonoBehaviour
 
             go.GetComponentsInChildren<Image>(true)[1].sprite = Resources.Load<Sprite>($"Gastromorphs/{gastromorph.Name}");
 
-            go.GetComponentsInChildren<TextMeshProUGUI>()[0].text = gastromorph.Gastromorph_id.ToString();
-            go.GetComponentsInChildren<TextMeshProUGUI>()[1].text = gastromorph.Name;
+            go.GetComponentsInChildren<TextMeshProUGUI>()[1].text = gastromorph.Gastromorph_id.ToString();
+            go.GetComponentsInChildren<TextMeshProUGUI>()[0].text = gastromorph.Name;
 
             instantiatedGastromorphs.Add(go);
         }
@@ -100,8 +97,6 @@ public class GridManager : MonoBehaviour
         {
             Destroy(go);
         }
-
-        Debug.Log("Hola");
 
         List<Gastromorph> gastromorphs = gManager.AllGastromorphs;
         List<Gastromorph> filteredGastromorphs = new List<Gastromorph>();
@@ -124,15 +119,13 @@ public class GridManager : MonoBehaviour
 
         foreach (Gastromorph gastromorph in gastromorphs)
         {
-            if (textFilters != null)
+            hasFiltersCount = 0;
+            if (textFilters != string.Empty)
             {
-                Debug.Log("Hola 1");
                 if (gastromorph.Name.ToLower().Contains(textFilters.ToLower()) || gastromorph.Gastromorph_id.ToString().Contains(textFilters))
                 {
-                    Debug.Log("Hola 2");
                     if (attFilters.Count > 0)
                     {
-                        Debug.Log("Hola 3");
                         foreach (string attFilter in attFilters)
                         {
                             foreach (Biome biome in gastromorph.Biomes)
@@ -164,11 +157,11 @@ public class GridManager : MonoBehaviour
                 }
                 else textMatch = false;
             }
-            else if (attFilters.Count > 0)
-            {
-                Debug.Log("Hola 4");
+            else if (filtersCount > 0)
+            {           
                 foreach (string attFilter in attFilters)
                 {
+                    Debug.Log(attFilter);
                     foreach (Biome biome in gastromorph.Biomes)
                     {
                         if (biome.Name == attFilter)
@@ -193,9 +186,11 @@ public class GridManager : MonoBehaviour
                         }
                     }
                 }
+                textMatch = true;
             }
-            else textMatch = true;
-
+            else 
+                textMatch = true; 
+      
             if (textMatch)
             {
                 if (filtersCount > 0)
@@ -205,10 +200,7 @@ public class GridManager : MonoBehaviour
                         filteredGastromorphs.Add(gastromorph);
                     }
                 }
-                else
-                {
-                    filteredGastromorphs.Add(gastromorph);
-                }
+                else { filteredGastromorphs.Add(gastromorph); }
             }
         }
 

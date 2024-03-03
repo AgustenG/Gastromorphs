@@ -14,7 +14,7 @@ public class ButtonGastromorph : MonoBehaviour
         btn.onClick.AddListener(() => {
             Gastromorph gastromorph = GastromorphsManager.Instance.GetGastromorphFromId(id.text);
             SingleGastroPage.Instance.SetGastromorphAttributes(gastromorph);
-            CanvasManager.instance.startGastromorph();
+            CanvasManager.instance.startGastromorph(true);
             SingleGastroPage.Instance.OpenGastromorph(gastromorph);
             ModelRotation.Instance.ActivateModel(gastromorph.Name);
 
