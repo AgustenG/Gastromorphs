@@ -3,6 +3,7 @@ using UnityEngine;
 public class CanvasManager : MonoBehaviour
 {
     public static CanvasManager instance;
+
     [Header("StartMenu")]
     [SerializeField] private GameObject startMenu;
     [Header("ListView")]
@@ -23,6 +24,9 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] private GameObject settingsBtn;
 
     [HideInInspector] public bool mapBtn = false;
+    [HideInInspector] public bool returnMap = false;
+    [HideInInspector] public bool returnList = false;
+    [HideInInspector] public bool returnSearch = false;
 
 
     void Awake()
@@ -67,7 +71,14 @@ public class CanvasManager : MonoBehaviour
         mapView.SetActive(false);
         listView.SetActive(true);
     }
-    public void startGastromorph()
+    public void startGastromorph(bool isFromSearch)
+    {
+        if (isFromSearch) returnSearch = true;
+        else returnList = true;
+        ActiveGastroPage();
+    }
+
+    private void ActiveGastroPage()
     {
         startMenu.SetActive(false);
         searchView.SetActive(false);
@@ -75,20 +86,31 @@ public class CanvasManager : MonoBehaviour
         listView.SetActive(false);
         gastromorph.SetActive(true);
     }
+
     public void volver()
     {
-        settingsBtn.SetActive(false);
-        searchView.SetActive(false);
-        mapView.SetActive(false);
-        listView.SetActive(false);
-        gastromorph.SetActive(false);
-        startMenu.SetActive(true);
+        if (!CheckReturnBool())
+        {
+            settingsBtn.SetActive(false);
+            searchView.SetActive(false);
+            mapView.SetActive(false);
+            listView.SetActive(false);
+            gastromorph.SetActive(false);
+            startMenu.SetActive(true);
+            StopAllCoroutines();
+            mapBtn = false;
+        }
     }
 
-    public void activateCanvas()
+    private bool CheckReturnBool() 
     {
-        startGastromorph();
+        if (returnMap) { startMap(); returnMap = false; return true; }
+        if (returnList) { startList(); returnList = false; return true; }
+        if (returnSearch) { startSearch(); returnSearch = false; return true; }
+        return false;
     }
+
+    //public void activateCanvas() { startGastromorph(/*3*/ false); }
 
     public void startSettings()
     {
@@ -108,7 +130,7 @@ public class CanvasManager : MonoBehaviour
 #elif UNITY_ANDROID
         AndroidJavaObject activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
         activity.Call<bool>("moveTaskToBack", true);
-        Debug.Log("Adiós");      
+        Debug.Log("AdiÃ³s");      
 #else
         Application.Quit();
 #endif
