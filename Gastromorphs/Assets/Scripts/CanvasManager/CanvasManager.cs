@@ -21,7 +21,7 @@ public class CanvasManager : MonoBehaviour
     [Header("MapButton")]
     [SerializeField] private GameObject mapButton;
     [Header("SettingsButton")]
-    [SerializeField] public GameObject settingsBtn;
+    [SerializeField] private GameObject settingsBtn;
 
     [HideInInspector] public bool mapBtn = false;
     [HideInInspector] public bool returnMap = false;
@@ -45,14 +45,12 @@ public class CanvasManager : MonoBehaviour
         searchButton.SetActive(false);
         mapButton.SetActive(false);
         settingsBtn.SetActive(false);
-        Time.timeScale = 1f;
     }
     public void startButtons()
     {
         listButton.SetActive(!listButton.activeSelf);
         searchButton.SetActive(!searchButton.activeSelf);
         mapButton.SetActive(!mapButton.activeSelf);
-        Time.timeScale = 1f;
     }
 
     public void startSearch()
@@ -126,9 +124,16 @@ public class CanvasManager : MonoBehaviour
 
     public void ExitGame()
     {
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#elif UNITY_ANDROID
+        AndroidJavaObject activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
+        activity.Call<bool>("moveTaskToBack", true);
+        Debug.Log("Adiós");      
+#else
         Application.Quit();
-        #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-        #endif
+#endif
+
     }
 }

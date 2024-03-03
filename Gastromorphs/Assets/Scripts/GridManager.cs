@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -42,8 +40,8 @@ public class GridManager : MonoBehaviour
 
             go.GetComponentsInChildren<Image>(true)[1].sprite = Resources.Load<Sprite>($"Gastromorphs/{gastromorph.Name}");
            
-            go.GetComponentsInChildren<TextMeshProUGUI>()[0].text = gastromorph.Gastromorph_id.ToString();
-            go.GetComponentsInChildren<TextMeshProUGUI>()[1].text = gastromorph.Name;
+            go.GetComponentsInChildren<TextMeshProUGUI>()[0].text = gastromorph.Name;
+            go.GetComponentsInChildren<TextMeshProUGUI>()[1].text = gastromorph.Gastromorph_id.ToString();
         }
     }
 
@@ -54,7 +52,7 @@ public class GridManager : MonoBehaviour
             GameObject go = Instantiate(toggablePrefab, parentContent[(int)Parents.Biome].transform);
             go.SetActive(true);
 
-            go.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>($"Biomes/{biome.Name}");
+           go.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>($"Biomes/{biome.Name}");
 
         }
     }

@@ -4,27 +4,26 @@ using UnityEngine.EventSystems;
 public class ModelRotation : MonoBehaviour, IDragHandler
 {
     public Transform[] models;
+
     public float velocidadRotation = 1f;
-    //public ModelNames modelName;
-    //public enum ModelNames
-    //{
-    //    Guindilava,
-    //    Taco
-    //}
+
+    public static ModelRotation Instance;
+
 
     private void Awake()
     {
+        Instance = this;
         foreach (var model in models)
         {
             model.gameObject.SetActive(false);
         }
     }
 
-    private void Update()
+    public void ActivateModel(string name)
     {
         foreach (Transform model in models)
         {
-            if (model.gameObject.name == "Guindilava")
+            if (model.gameObject.name == name)
             {
                 model.gameObject.SetActive(true);
             }
