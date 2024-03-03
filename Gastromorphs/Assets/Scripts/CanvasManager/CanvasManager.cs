@@ -24,6 +24,7 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] public GameObject settingsBtn;
 
     [HideInInspector] public bool mapBtn = false;
+    [HideInInspector] public bool returnMap = false;
 
 
     void Awake()
@@ -80,6 +81,7 @@ public class CanvasManager : MonoBehaviour
     }
     public void volver()
     {
+        if(returnMap) { startMap(); returnMap = false; return; }
         settingsBtn.SetActive(false);
         searchView.SetActive(false);
         mapView.SetActive(false);
