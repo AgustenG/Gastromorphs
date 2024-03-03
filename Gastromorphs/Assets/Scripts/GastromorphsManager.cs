@@ -5,8 +5,7 @@ using Unity.VisualScripting;
 using System;
 
 public class GastromorphsManager : MonoBehaviour
-{
-    [SerializeField]
+{ 
     private List<Gastromorph> allGastromorphs = new();
     public List<Gastromorph> AllGastromorphs
     {
@@ -14,7 +13,6 @@ public class GastromorphsManager : MonoBehaviour
         private set { allGastromorphs = value; }
     }
 
-    [SerializeField]
     private List<Biome> allBiomes = new();
     public List<Biome> AllBiomes
     {
@@ -22,7 +20,6 @@ public class GastromorphsManager : MonoBehaviour
         private set { allBiomes = value; }
     }
 
-    [SerializeField]
     private List<Type> allElements = new();
     public List<Type> AllElements
     {
@@ -30,15 +27,12 @@ public class GastromorphsManager : MonoBehaviour
         private set { allElements = value; }
     }
 
-    [SerializeField]
     private List<Flavour> allFlavours = new();
     public List<Flavour> AllFlavours
     {
         get { return allFlavours; }
         private set { allFlavours = value; }
     }
-
-
     public int GastromorphCount
     {
         get { return AllGastromorphs.Count; }
@@ -126,15 +120,7 @@ public class GastromorphsManager : MonoBehaviour
         ApplyFilters();
     }
 
-    public Gastromorph GetGastromorphFromId(string id)
-    {
-        foreach (Gastromorph item in allGastromorphs)
-        {
-            if (item.Gastromorph_id == Convert.ToInt32(id))
-                return item;
-        }
-        return null;
-    }
+
     private void ApplyFilters()
     {
         filteredList.Clear();
@@ -157,7 +143,15 @@ public class GastromorphsManager : MonoBehaviour
             filteredList.Add(gastromorph);
         }
     }
-
+    public Gastromorph GetGastromorphFromId(string id)
+    {
+        foreach (Gastromorph item in allGastromorphs)
+        {
+            if (item.Gastromorph_id == Convert.ToInt32(id))
+                return item;
+        }
+        return null;
+    }
     public void InstantiateGastromorph()
     {
         foreach (Gastromorph gastromorph in AllGastromorphs)
