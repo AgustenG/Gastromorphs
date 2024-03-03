@@ -8,12 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SplashScreen.unity
     guid: 38098286fc8148042a5645db1579362b
-  - enabled: 0
-    path: Assets/Scenes/MainScene.unity
-    guid: e43766e1f81141749805324cb85626eb
   - enabled: 1
-    path: Assets/Scenes/Olav.unity
-    guid: 5997d0b837a37e24eb82f02759a7f013
-    path: Assets/Scenes/Agus.unity
+    path: Assets/Scenes/MainScene.unity
     guid: 4b68a7e53ab25c24390c4a50d7041f60
   m_configObjects: {}

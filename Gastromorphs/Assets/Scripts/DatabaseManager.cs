@@ -16,6 +16,7 @@ public class DatabaseManager : MonoBehaviour
 
     [SerializeField] private GastromorphsManager manager;
 
+    private bool databaseDownloaded = false;
     public enum Tables
     {
         Biome,
@@ -26,22 +27,24 @@ public class DatabaseManager : MonoBehaviour
     private void Awake()
     {
 
-
+        DontDestroyOnLoad(gameObject);
 #if UNITY_EDITOR        // For Editor
         dbConnection = GetDBFromStreamingAssets();
         Debug.Log("Opening From editor");
+        dbConnection.Open();
+        dbCommandReadValue = dbConnection.CreateCommand();
+        SetGastromorphsFromDB();
 #elif UNITY_ANDROID     // For Android  
-        StartCoroutine(SetDatabase());
+        StartCoroutine(SetDatabase());      
         dbConnection = GetDatabaseFromPersistentDataPath();
-        Debug.Log("Opening From Android");
+        Debug.Log("Opening From Android");             
 #else                   // For Windows ? 
         dbConnection = GetDBFromStreamingAssets();
         Debug.Log("Opening From windows");
 #endif
-
-        dbConnection.Open();
-        dbCommandReadValue = dbConnection.CreateCommand();
-        SetGastromorphsFromDB();
+        //dbConnection.Open();
+        //dbCommandReadValue = dbConnection.CreateCommand();
+        //SetGastromorphsFromDB();
     }
 
     private void OnDisable()
@@ -179,7 +182,6 @@ public class DatabaseManager : MonoBehaviour
         gridManager.TogglesListeners();
         dbCommandReadValue.Dispose();
 
-
         Destroy(this);
     }
 
@@ -225,17 +227,24 @@ public class DatabaseManager : MonoBehaviour
 
             if (unityWebRequest.result == UnityWebRequest.Result.Success)
             {
+                Debug.Log("Hello");
                 // Retrieve results as binary data.
                 byte[] data = unityWebRequest.downloadHandler.data;
 
                 // Writes the DB in the persistent memory.
                 File.WriteAllBytes(Path.Combine(Application.persistentDataPath, "Mydatabase.sqlite"), data);
+
+                dbConnection.Open();
+                dbCommandReadValue = dbConnection.CreateCommand();
+                SetGastromorphsFromDB();
             }
             else
             {
                 Debug.LogError("Failed to download database. Error: " + unityWebRequest.error);
             }
         }
+
+        databaseDownloaded = true;
     }
 
 
