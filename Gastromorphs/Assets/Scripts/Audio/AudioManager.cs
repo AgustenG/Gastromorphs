@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-
+    public static AudioManager Instance;
     [Header("------------ Audio Source --------------")]
     public AudioClip backgroundMusic;
     private AudioSource audioSource;
@@ -24,6 +24,10 @@ public class AudioManager : MonoBehaviour
         if (musicToggle != null)
         {
             musicToggle.onValueChanged.AddListener(ToggleMusic);
+        }
+        if( Instance != null)
+        {
+            Instance = this;
         }
     }
     void Start()

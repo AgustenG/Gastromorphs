@@ -6,6 +6,7 @@ public class ButtonGastromorph : MonoBehaviour
 {
     [SerializeField] private Button button;
     [SerializeField] private TextMeshProUGUI id;
+    
 
     private void Awake()
     {
@@ -17,6 +18,7 @@ public class ButtonGastromorph : MonoBehaviour
             CanvasManager.instance.startGastromorph(true);
             SingleGastroPage.Instance.OpenGastromorph(gastromorph);
             ModelRotation.Instance.ActivateModel(gastromorph.Name);
+            //AudioManager.Instance.clickBotton();
 
         });
 

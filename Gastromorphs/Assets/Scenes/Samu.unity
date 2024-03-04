@@ -295,6 +295,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: volver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8726449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -923,6 +935,18 @@ MonoBehaviour:
       - m_Target: {fileID: 45073151}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1691,6 +1715,18 @@ MonoBehaviour:
       - m_Target: {fileID: 123667829}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2494,6 +2530,18 @@ MonoBehaviour:
       - m_Target: {fileID: 173538065}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4537,6 +4585,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &287645071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6362,6 +6422,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &396224340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6746,6 +6818,18 @@ MonoBehaviour:
       - m_Target: {fileID: 420218217}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7221,6 +7305,18 @@ MonoBehaviour:
       - m_Target: {fileID: 444733663}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8945,6 +9041,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &571791025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9084,6 +9192,18 @@ MonoBehaviour:
       - m_Target: {fileID: 574073161}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9426,6 +9546,18 @@ MonoBehaviour:
       - m_Target: {fileID: 607285292}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10053,6 +10185,18 @@ MonoBehaviour:
       - m_Target: {fileID: 635783966}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10715,6 +10859,18 @@ MonoBehaviour:
       - m_Target: {fileID: 661554097}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11696,6 +11852,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &729859739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11972,6 +12140,18 @@ MonoBehaviour:
       - m_Target: {fileID: 742588301}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12653,6 +12833,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &773833218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13227,6 +13419,18 @@ MonoBehaviour:
       - m_Target: {fileID: 801461275}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13854,6 +14058,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &823305159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14224,6 +14440,18 @@ MonoBehaviour:
       - m_Target: {fileID: 872251134}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14672,6 +14900,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &894498312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14811,6 +15051,18 @@ MonoBehaviour:
       - m_Target: {fileID: 900068657}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15345,6 +15597,18 @@ MonoBehaviour:
       - m_Target: {fileID: 925052733}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16148,6 +16412,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &966994771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16493,7 +16769,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1424678517}
+      - m_Target: {fileID: 4867761856635874895}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: clickGeneral
         m_Mode: 1
@@ -16662,6 +16938,18 @@ MonoBehaviour:
       - m_Target: {fileID: 972310038}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18531,6 +18819,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1079582489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19147,6 +19447,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1118928653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19286,6 +19598,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1128226612}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19809,6 +20133,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1158208320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20116,6 +20452,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1170502872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20255,6 +20603,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1172478679}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20862,6 +21222,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1226181528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21001,6 +21373,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1231107413}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21246,6 +21630,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1237500015}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23102,6 +23498,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1331218332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23389,6 +23797,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1336848318}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23838,7 +24258,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1424678517}
+      - m_Target: {fileID: 4867761856635874895}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: volver
         m_Mode: 1
@@ -24057,7 +24477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1350081849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24458,7 +24878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1371689194
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24647,6 +25067,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1373094608}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24976,6 +25408,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1397980259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25111,91 +25555,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1405013981}
   m_CullTransparentMesh: 1
---- !u!1001 &1424678516
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1529911976474671710, guid: a01ad2fe145ecac4abe4d67f6e8ee3c7,
-        type: 3}
-      propertyPath: m_Name
-      value: AudioManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 1905008207199185191, guid: a01ad2fe145ecac4abe4d67f6e8ee3c7,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 436.93805
-      objectReference: {fileID: 0}
-    - target: {fileID: 1905008207199185191, guid: a01ad2fe145ecac4abe4d67f6e8ee3c7,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1211.3428
-      objectReference: {fileID: 0}
-    - target: {fileID: 1905008207199185191, guid: a01ad2fe145ecac4abe4d67f6e8ee3c7,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -15.892909
-      objectReference: {fileID: 0}
-    - target: {fileID: 1905008207199185191, guid: a01ad2fe145ecac4abe4d67f6e8ee3c7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1905008207199185191, guid: a01ad2fe145ecac4abe4d67f6e8ee3c7,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1905008207199185191, guid: a01ad2fe145ecac4abe4d67f6e8ee3c7,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1905008207199185191, guid: a01ad2fe145ecac4abe4d67f6e8ee3c7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1905008207199185191, guid: a01ad2fe145ecac4abe4d67f6e8ee3c7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1905008207199185191, guid: a01ad2fe145ecac4abe4d67f6e8ee3c7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1905008207199185191, guid: a01ad2fe145ecac4abe4d67f6e8ee3c7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4867761857493004347, guid: a01ad2fe145ecac4abe4d67f6e8ee3c7,
-        type: 3}
-      propertyPath: musicToggle
-      value: 
-      objectReference: {fileID: 8589358959510970406}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a01ad2fe145ecac4abe4d67f6e8ee3c7, type: 3}
---- !u!114 &1424678517 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4867761857493004347, guid: a01ad2fe145ecac4abe4d67f6e8ee3c7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1424678516}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0bcde626a5e3184d802159aa257083e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1439205024
 GameObject:
   m_ObjectHideFlags: 0
@@ -25403,6 +25762,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1440768389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25542,6 +25913,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1453691954}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26250,6 +26633,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1488693473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26535,6 +26930,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1511908010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26683,6 +27090,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1512595033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26822,6 +27241,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1513448911}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27354,6 +27785,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1545670038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27779,6 +28222,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1558614956}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28259,7 +28714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1571277579
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29749,6 +30204,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1652954828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29985,6 +30452,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1663036885}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30863,6 +31342,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1700893033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31002,6 +31493,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1711366270}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -31516,6 +32019,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1731921075}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33833,6 +34348,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1832227503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35965,6 +36492,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1967771883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36298,6 +36837,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1982127490}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36845,6 +37396,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2034077467}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: StartFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -37585,6 +38148,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2092055866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38126,6 +38701,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4867761856635874895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: locationMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2145142807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38507,6 +39094,102 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!82 &759997882610828959
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529911977215370282}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.495
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &856121538198357069
 GameObject:
   m_ObjectHideFlags: 0
@@ -38858,6 +39541,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4293120634689509807}
   m_CullTransparentMesh: 1
+--- !u!1 &1529911977215370282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1905008208479876947}
+  - component: {fileID: 4867761856635874895}
+  - component: {fileID: 759997882610828959}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!114 &1606230842398145403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38970,7 +39671,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1424678517}
+      - m_Target: {fileID: 4867761856635874895}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: clickGeneral
         m_Mode: 1
@@ -39030,6 +39731,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!4 &1905008208479876947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529911977215370282}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 436.93805, y: 1211.3428, z: -15.892909}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1948825748894707027
 GameObject:
   m_ObjectHideFlags: 0
@@ -40821,6 +41537,27 @@ RectTransform:
   m_AnchoredPosition: {x: 248, y: 705}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4867761856635874895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529911977215370282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0bcde626a5e3184d802159aa257083e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundMusic: {fileID: 8300000, guid: 3ba520eb8e4f2e04dbe3fec9e48b28b7, type: 3}
+  clickBoton:
+  - {fileID: 8300000, guid: 905c26e60512c3743a3ad31c0f2b56e9, type: 3}
+  - {fileID: 8300000, guid: ec9cc5e57dd57044f86d2b30d2c35569, type: 3}
+  - {fileID: 8300000, guid: 2032a8f4643a5b049bbeabf99187db92, type: 3}
+  - {fileID: 8300000, guid: 4084e48e0bc866d42810caa8aa594bdb, type: 3}
+  - {fileID: 8300000, guid: 13dad88b5c4a80948850e630996e31c8, type: 3}
+  - {fileID: 8300000, guid: 48b0a09328209b84eabfcb76cb870ca2, type: 3}
+  musicToggle: {fileID: 8589358959510970406}
 --- !u!222 &4878793378217511050
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40922,7 +41659,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1424678517}
+      - m_Target: {fileID: 4867761856635874895}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: clickGeneral
         m_Mode: 1
@@ -41008,7 +41745,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1424678517}
+      - m_Target: {fileID: 4867761856635874895}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: clickGeneral
         m_Mode: 1
@@ -41305,7 +42042,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1424678517}
+      - m_Target: {fileID: 4867761856635874895}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: clickGeneral
         m_Mode: 1
@@ -41801,7 +42538,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1424678517}
+      - m_Target: {fileID: 4867761856635874895}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: volver
         m_Mode: 1
@@ -42653,7 +43390,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1424678517}
+      - m_Target: {fileID: 4867761856635874895}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: clickGeneral
         m_Mode: 1
@@ -42865,7 +43602,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1424678517}
+      - m_Target: {fileID: 4867761856635874895}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: clickBotton
         m_Mode: 1
@@ -43241,4 +43978,4 @@ SceneRoots:
   - {fileID: 386560061}
   - {fileID: 2088812217}
   - {fileID: 3351181166691445672}
-  - {fileID: 1424678516}
+  - {fileID: 1905008208479876947}
