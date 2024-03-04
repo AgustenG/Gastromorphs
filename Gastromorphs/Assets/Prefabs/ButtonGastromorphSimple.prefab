@@ -346,3 +346,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 5286466763877050712}
   id: {fileID: 1468333698651951975}
+  isFromSearch: 0

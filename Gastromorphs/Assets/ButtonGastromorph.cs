@@ -6,6 +6,7 @@ public class ButtonGastromorph : MonoBehaviour
 {
     [SerializeField] private Button button;
     [SerializeField] private TextMeshProUGUI id;
+    public bool isFromSearch;
 
     private void Awake()
     {
@@ -14,7 +15,7 @@ public class ButtonGastromorph : MonoBehaviour
         btn.onClick.AddListener(() => {
             Gastromorph gastromorph = GastromorphsManager.Instance.GetGastromorphFromId(id.text);
             SingleGastroPage.Instance.SetGastromorphAttributes(gastromorph);
-            CanvasManager.instance.startGastromorph(true);
+            CanvasManager.instance.startGastromorph(isFromSearch);
             SingleGastroPage.Instance.OpenGastromorph(gastromorph);
             ModelRotation.Instance.ActivateModel(gastromorph.Name);
 
