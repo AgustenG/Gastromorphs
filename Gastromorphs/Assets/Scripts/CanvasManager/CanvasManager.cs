@@ -40,6 +40,7 @@ public class CanvasManager : MonoBehaviour
         listView.SetActive(false);
         searchView.SetActive(false);
         mapView.SetActive(false);
+        gastromorph.SetActive(true);
         gastromorph.SetActive(false);
         listButton.SetActive(false);
         searchButton.SetActive(false);
