@@ -92,12 +92,12 @@ public class CanvasManager : MonoBehaviour
     {
         if (!CheckReturnBool())
         {
+            startMenu.SetActive(true);
             settingsBtn.SetActive(false);
             searchView.SetActive(false);
             mapView.SetActive(false);
             listView.SetActive(false);
             gastromorph.SetActive(false);
-            startMenu.SetActive(true);
             StopAllCoroutines();
             mapBtn = false;
         }
@@ -105,13 +105,12 @@ public class CanvasManager : MonoBehaviour
 
     private bool CheckReturnBool() 
     {
-        if (returnMap) { startMap(); returnMap = false; return true; }
         if (returnList) { startList(); returnList = false; return true; }
         if (returnSearch) { startSearch(); returnSearch = false; return true; }
+        if (returnMap) { startMap(); returnMap = false; return true; }
         return false;
     }
 
-    //public void activateCanvas() { startGastromorph(/*3*/ false); }
 
     public void startSettings()
     {

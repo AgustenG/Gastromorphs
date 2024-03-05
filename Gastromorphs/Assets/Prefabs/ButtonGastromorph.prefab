@@ -67,8 +67,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: NOMBRE GASTROMORPH
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e7146c3eaeef7214fbbfde4fd59021f5, type: 2}
+  m_sharedMaterial: {fileID: -3472980541663586268, guid: e7146c3eaeef7214fbbfde4fd59021f5,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -92,7 +93,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70.55
+  m_fontSize: 72
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -276,8 +277,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: ID
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e7146c3eaeef7214fbbfde4fd59021f5, type: 2}
+  m_sharedMaterial: {fileID: -3472980541663586268, guid: e7146c3eaeef7214fbbfde4fd59021f5,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -481,3 +483,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 5286466763877050712}
   id: {fileID: 1468333698651951975}
+  isFromSearch: 1
