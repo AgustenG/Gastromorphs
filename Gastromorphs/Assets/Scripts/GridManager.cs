@@ -69,6 +69,7 @@ public class GridManager : MonoBehaviour
     private void OnToggleValueChanged(bool isOn)
     {
         FilterGastromorphs();
+        AudioManager.Instance.clickToggle();
     }
 
     void GetInputText(string filterText)
