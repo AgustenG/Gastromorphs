@@ -1,13 +1,20 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ModelRotation : MonoBehaviour, IDragHandler
+public class ModelRotation : MonoBehaviour, IDragHandler, IPointerClickHandler
 {
     public Transform[] models;
 
     public float velocidadRotation = 1f;
 
     public static ModelRotation Instance;
+
+    private bool isAnimating = false;
+
+    private float scalingSpeed = 0.5f;
+
 
 
     private void Awake()
@@ -38,12 +45,64 @@ public class ModelRotation : MonoBehaviour, IDragHandler
     public void OnDrag(PointerEventData evenData)
     {
         float rotX = evenData.delta.x * velocidadRotation;
-        foreach(Transform model in models)
+        foreach (Transform model in models)
         {
-            if(model.gameObject.activeSelf)
+            if (model.gameObject.activeSelf)
             {
                 model.Rotate(Vector3.up, -rotX, Space.World);
             }
         }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (isAnimating) return;
+        StartCoroutine(ScaleOverTime(scalingSpeed));    
+    }
+
+    IEnumerator ScaleOverTime(float time)
+    {
+        isAnimating = true;
+        foreach (Transform model in models)
+        {
+            if (model.gameObject.activeSelf)
+            {
+                Vector3 originalScale = model.transform.localScale;
+                Vector3 destinationScale = new(1.2f, 1.2f, 1.2f);
+
+                float currentTime = 0.0f;
+
+                do
+                {
+                    model.transform.localScale = Vector3.Lerp(originalScale, destinationScale, currentTime / time);
+                    currentTime += Time.deltaTime;
+                    yield return null;
+                } while (currentTime <= time);
+                StartCoroutine(DescaleOverTime(scalingSpeed));
+            }
+        }     
+    }
+
+    IEnumerator DescaleOverTime(float time)
+    {      
+        foreach (Transform model in models)
+        {
+            if (model.gameObject.activeSelf)
+            {
+                Vector3 originalScale = model.transform.localScale;
+                Vector3 destinationScale = new(1, 1, 1);
+
+                float currentTime = 0.0f;
+
+                do
+                {
+                    model.transform.localScale = Vector3.Lerp(originalScale, destinationScale, currentTime / time);
+                    currentTime += Time.deltaTime;
+                    yield return null;
+                } while (currentTime <= time);
+                isAnimating = false;
+            }
+        }
+      
     }
 }
