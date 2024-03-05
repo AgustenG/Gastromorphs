@@ -18,7 +18,7 @@ public class SingleGastroPage : MonoBehaviour
     [SerializeField] GameObject attributePrefab;
 
 
-    private Sprite[] Sprites;
+    private Sprite Sprites;
 
 
     public static SingleGastroPage Instance;
@@ -83,19 +83,9 @@ public class SingleGastroPage : MonoBehaviour
         gastromorphDescription.text = gastromorph.Description;
         gastromorphID.text = gastromorph.Gastromorph_id.ToString();
 
-        Sprites = Resources.LoadAll<Sprite>("Biomes/Elements");
-        Sprite sprite = GetSpriteByName(gastromorph.Biomes[0].Name);
-
+        Sprite sprite = Resources.Load<Sprite>($"BiomeBanners/{gastromorph.Biomes[0].Name}");
+     
         banner.GetComponent<Image>().sprite = sprite;
 
-    }
-    public Sprite GetSpriteByName(string name)
-    {
-        for (int i = 0; i < Sprites.Length; i++)
-        {
-            if (Sprites[i].name == name)
-                return Sprites[i];
-        }
-        return null;
     }
 }
