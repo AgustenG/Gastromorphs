@@ -69,6 +69,7 @@ public class GridManager : MonoBehaviour
     private void OnToggleValueChanged(bool isOn)
     {
         FilterGastromorphs();
+        AudioManager.Instance.clickToggle();
     }
 
     void GetInputText(string filterText)
@@ -83,6 +84,8 @@ public class GridManager : MonoBehaviour
         {
             GameObject go = Instantiate(gastromorphPrefabSimple, parentContent[(int)Parents.GastroIcon].transform);
             go.SetActive(true);
+
+            go.GetComponent<Image>().sprite = Resources.Load<Sprite>($"BiomeIcons/{gastromorph.Biomes[0].Name}");
 
             go.GetComponentsInChildren<Image>(true)[1].sprite = Resources.Load<Sprite>($"Gastromorphs/{gastromorph.Name}");
 

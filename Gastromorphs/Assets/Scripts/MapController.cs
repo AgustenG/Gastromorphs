@@ -25,7 +25,9 @@ public class MapController : MonoBehaviour
     private IEnumerator Filter()
     {
         Icon.gameObject.SetActive(true);
+        AudioManager.Instance.locationMap(true);
         yield return new WaitForSeconds(seconds);
+        AudioManager.Instance.locationMap(false);
         Icon.gameObject.SetActive(false);
         CanvasManager.instance.startSearch();
         foreach (Toggle toggle in GridManager.Instance.filterToggles)
