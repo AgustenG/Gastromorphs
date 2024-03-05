@@ -18,7 +18,7 @@ public class ButtonGastromorph : MonoBehaviour
             CanvasManager.instance.startGastromorph(true);
             SingleGastroPage.Instance.OpenGastromorph(gastromorph);
             ModelRotation.Instance.ActivateModel(gastromorph.Name);
-            //AudioManager.Instance.clickBotton();
+            AudioManager.Instance.clickGeneral();
 
         });
 

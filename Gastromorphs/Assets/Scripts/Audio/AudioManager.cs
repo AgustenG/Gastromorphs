@@ -25,10 +25,9 @@ public class AudioManager : MonoBehaviour
         {
             musicToggle.onValueChanged.AddListener(ToggleMusic);
         }
-        if( Instance != null)
-        {
-            Instance = this;
-        }
+        
+        Instance = this;
+        
     }
     void Start()
     {
@@ -49,9 +48,16 @@ public class AudioManager : MonoBehaviour
         audioSource.PlayOneShot(clickBoton[2]);
         audioSource.PlayOneShot(clickBoton[5]);
     }
-    public void locationMap()
+    public void locationMap(bool isOn)
     {
-        audioSource.PlayOneShot(clickBoton[3]);
+        if (isOn)
+        {
+            audioSource.PlayOneShot(clickBoton[3]);
+        }
+    }
+    public void clickToggle()
+    {
+        audioSource.PlayOneShot(clickBoton[6]);
     }
     public void ToggleMusic(bool isOn)
     {
