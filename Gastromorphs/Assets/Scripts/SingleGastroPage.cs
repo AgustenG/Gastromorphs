@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,9 +17,7 @@ public class SingleGastroPage : MonoBehaviour
     [SerializeField] GameObject banner;
 
     [SerializeField] GameObject attributePrefab;
-
-
-    private Sprite Sprites;
+    [SerializeField] Image spinImage;
 
 
     public static SingleGastroPage Instance;
@@ -35,7 +34,7 @@ public class SingleGastroPage : MonoBehaviour
 
         foreach (Biome biome in gastromorph.Biomes)
         {
-           GameObject go =  Instantiate(attributePrefab, biomeContent.transform);
+            GameObject go = Instantiate(attributePrefab, biomeContent.transform);
 
             go.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>($"Biomes/{biome.Name}");
             go.SetActive(true);
@@ -84,8 +83,23 @@ public class SingleGastroPage : MonoBehaviour
         gastromorphID.text = gastromorph.Gastromorph_id.ToString();
 
         Sprite sprite = Resources.Load<Sprite>($"BiomeBanners/{gastromorph.Biomes[0].Name}");
-     
-        banner.GetComponent<Image>().sprite = sprite;
 
+        banner.GetComponent<Image>().sprite = sprite;
+      
+       // StartCoroutine(SpinImage());
+
+    }
+    private IEnumerator SpinImage()
+    {
+       
+        float currentTime = 0.0f;
+
+        do
+        {
+            spinImage.fillAmount = Mathf.Lerp(0, 1, currentTime / 1f);
+            currentTime += Time.deltaTime;
+            yield return null;
+        } while (currentTime <= 1f);
+        spinImage.fillAmount = 1f;
     }
 }
