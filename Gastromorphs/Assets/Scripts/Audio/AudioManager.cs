@@ -33,19 +33,24 @@ public class AudioManager : MonoBehaviour
     {
         ToggleMusic(musicToggle.isOn);
     }
-    public void clickBotton()
+
+    public void Click()
     {
         audioSource.PlayOneShot(clickBoton[0]);
+    }
+    public void clickBotton()
+    {
+        Click();
         audioSource.PlayOneShot(clickBoton[1]);
     }
     public void clickGeneral()
     {
-        audioSource.PlayOneShot(clickBoton[0]);
-        audioSource.PlayOneShot(clickBoton[5]);
+        Click();
+        audioSource.PlayOneShot(clickBoton[2]);
     }
     public void volver()
     {
-        audioSource.PlayOneShot(clickBoton[2]);
+        Click();
         audioSource.PlayOneShot(clickBoton[5]);
     }
     public void locationMap(bool isOn)
