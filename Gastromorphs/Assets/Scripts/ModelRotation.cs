@@ -78,19 +78,19 @@ public class ModelRotation : MonoBehaviour, IDragHandler, IPointerClickHandler
                     currentTime += Time.deltaTime;
                     yield return null;
                 } while (currentTime <= time);
-                StartCoroutine(DescaleOverTime(scalingSpeed));
+                StartCoroutine(DescaleOverTime(scalingSpeed,originalScale));
             }
         }     
     }
 
-    IEnumerator DescaleOverTime(float time)
+    IEnumerator DescaleOverTime(float time, Vector3 startingScale)
     {      
         foreach (Transform model in models)
         {
             if (model.gameObject.activeSelf)
             {
                 Vector3 originalScale = model.transform.localScale;
-                Vector3 destinationScale = new(1, 1, 1);
+                Vector3 destinationScale = startingScale;
 
                 float currentTime = 0.0f;
 
